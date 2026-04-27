@@ -74,6 +74,8 @@
             text-decoration: none;
             border-radius: 6px;
             transition: background 0.3s ease;
+            cursor: pointer;
+            border: none;
         }
 
         .cta-button:hover {
@@ -271,20 +273,99 @@
             opacity: 0.95;
         }
 
-        .cta-button-white {
-            display: inline-block;
-            background: #ffffff;
-            color: #0066cc;
-            padding: 16px 40px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.3s ease;
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .cta-button-white:hover {
-            background: #f0f0f0;
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 3px rgba(0,102,204,0.1);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: #0066cc;
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #0052a3;
+        }
+
+        .submit-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .form-status {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .form-status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .form-status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .email-fallback {
+            margin-top: 20px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .email-fallback a {
+            color: white;
+            text-decoration: underline;
         }
 
         footer {
@@ -320,6 +401,10 @@
             .problem h2, .solution h2, .how-it-works h2, .trust h2 {
                 font-size: 28px;
             }
+
+            .contact-form {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -334,7 +419,7 @@
         <div class="container">
             <h1>Know What Matters.<br>Every Morning.</h1>
             <p class="subheading">Daily intelligence briefings that help CPA firm owners make better decisions. No new software to learn. No complexity. Just insights delivered to your inbox.</p>
-            <a href="mailto:hello@covenantsystems.ai?subject=Interest in Daily Intelligence Briefing" class="cta-button">Start a Conversation</a>
+            <a href="#contact" class="cta-button">Start a Conversation</a>
         </div>
     </section>
 
@@ -431,11 +516,40 @@
         </div>
     </section>
 
-    <section class="cta-section">
+    <section id="contact" class="cta-section">
         <div class="container">
             <h2>Let's Start a Conversation</h2>
             <p>We're working with a small group of CPA firms to refine our intelligence briefings.<br>If this sounds like something your firm needs, let's talk.</p>
-            <a href="mailto:hello@covenantsystems.ai?subject=Interest in Daily Intelligence Briefing&body=Hi, I'm interested in learning more about Covenant Systems' daily intelligence briefings for CPA firms. Here's a bit about my firm:%0D%0A%0D%0AFirm Name:%0D%0APractice Areas:%0D%0ANumber of Professionals:%0D%0ABiggest Intelligence Challenge:%0D%0A%0D%0ALooking forward to the conversation." class="cta-button-white">Email hello@covenantsystems.ai</a>
+            
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdkoedwe" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="firm">Firm Name *</label>
+                    <input type="text" id="firm" name="firm" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Tell us about your biggest intelligence challenge</label>
+                    <textarea id="message" name="message" placeholder="e.g., Keeping up with tax law changes, understanding client industry trends, knowing what technology to adopt..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Send Message</button>
+                
+                <div id="formStatus"></div>
+            </form>
+
+            <p class="email-fallback">
+                Or email us directly at <a href="mailto:hello@covenantsystems.ai">hello@covenantsystems.ai</a>
+            </p>
         </div>
     </section>
 
@@ -452,5 +566,52 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        // Handle form submission
+        const form = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    formStatus.className = 'form-status success';
+                    formStatus.textContent = 'Message sent! We\'ll be in touch within 24 hours.';
+                    form.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Something went wrong. Please email us directly at hello@covenantsystems.ai';
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Send Message';
+            });
+        });
+
+        // Smooth scroll for CTA button
+        document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
