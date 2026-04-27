@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Free Assessment | Covenant Systems</title>
+    <meta name="description" content="Schedule a free 30-minute automation assessment for your law firm">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        header {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 40px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .intro {
+            text-align: center;
+            font-size: 18px;
+            color: #4a4a4a;
+            margin-bottom: 40px;
+        }
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .required {
+            color: #d32f2f;
+        }
+        .submit-btn {
+            background: #0066cc;
+            color: white;
+            padding: 14px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+        .submit-btn:hover {
+            background: #0052a3;
+        }
+        .what-happens {
+            background: #f0f7ff;
+            padding: 20px;
+            border-left: 4px solid #0066cc;
+            margin-top: 30px;
+            border-radius: 4px;
+        }
+        .what-happens h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .what-happens p {
+            color: #4a4a4a;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">Covenant Systems</a>
+    </header>
+
+    <div class="container">
+        <h1>Book Your Free Automation Assessment</h1>
+        <p class="intro">30 minutes. No sales pitch. Honest analysis of what's automatable in your practice.</p>
+
+        <div class="form-container">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="firm-name">Law Firm Name <span class="required">*</span></label>
+                    <input type="text" id="firm-name" name="firm-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="firm-size">Number of Attorneys <span class="required">*</span></label>
+                    <select id="firm-size" name="firm-size" required>
+                        <option value="">Select...</option>
+                        <option value="solo">Solo practitioner</option>
+                        <option value="2-5">2-5 attorneys</option>
+                        <option value="6-10">6-10 attorneys</option>
+                        <option value="11+">11+ attorneys</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="practice-areas">Primary Practice Areas <span class="required">*</span></label>
+                    <input type="text" id="practice-areas" name="practice-areas" placeholder="e.g., Family Law, Estate Planning, Immigration" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time-drain">What's Your Biggest Time Drain? <span class="required">*</span></label>
+                    <textarea id="time-drain" name="time-drain" placeholder="e.g., Drafting engagement letters, client intake forms, status update emails..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Preferred Time for Call</label>
+                    <textarea id="availability" name="availability" placeholder="e.g., Tuesdays/Thursdays 2-4pm EST, or let us know your typical availability"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Request Assessment</button>
+            </form>
+
+            <div class="what-happens">
+                <h3>What Happens Next</h3>
+                <p><strong>1. We'll email you</strong> within 24 hours to confirm your request and schedule a specific time.</p>
+                <p><strong>2. The call:</strong> We walk through your current workflows, identify what's automatable, and give you honest feedback on whether automation makes sense for your practice.</p>
+                <p><strong>3. If it fits:</strong> We send a clear proposal with scope, deliverables, timeline, and fixed pricing. No surprises.</p>
+                <p><strong>4. If it doesn't:</strong> We'll tell you honestly and won't waste your time trying to sell you something you don't need.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Covenant Systems AI LLC. <a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>
