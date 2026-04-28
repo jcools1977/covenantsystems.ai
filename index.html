@@ -89,33 +89,6 @@
             transform: translateY(0);
         }
 
-        .cta-button-group {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-button-secondary {
-            display: inline-block;
-            background: transparent;
-            color: #0066cc;
-            padding: 18px 48px;
-            font-size: 20px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 2px solid #0066cc;
-            box-shadow: none;
-        }
-
-        .cta-button-secondary:hover {
-            background: #f0f5ff;
-            transform: translateY(-2px);
-        }
-
         .problem {
             background: #f8f9fa;
             padding: 60px 0;
@@ -415,30 +388,6 @@
             color: #721c24;
         }
 
-        .divider {
-            text-align: center;
-            margin: 40px 0;
-            position: relative;
-        }
-
-        .divider::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: rgba(255,255,255,0.3);
-        }
-
-        .divider span {
-            background: #0066cc;
-            padding: 0 15px;
-            position: relative;
-            color: rgba(255,255,255,0.8);
-            font-size: 14px;
-        }
-
         .contact-fallback {
             text-align: center;
             margin-top: 20px;
@@ -501,15 +450,6 @@
                 font-size: 18px;
             }
 
-            .cta-button-secondary {
-                padding: 16px 32px;
-                font-size: 18px;
-            }
-
-            .cta-button-group {
-                gap: 10px;
-            }
-
             .contact-form {
                 padding: 30px 20px;
             }
@@ -527,10 +467,7 @@
         <div class="container">
             <h1>Know What Matters.<br>Every Morning.</h1>
             <p class="subheading">Daily intelligence briefings that help CPA firm owners make better decisions. No new software to learn. No complexity. Just insights delivered to your inbox.</p>
-            <div class="cta-button-group">
-                <a href="https://cal.com/covenantsystems/call" class="cta-button">Schedule a Call →</a>
-                <a href="#contact" class="cta-button-secondary">Email Instead</a>
-            </div>
+            <a href="#contact" class="cta-button">Start a Conversation →</a>
         </div>
     </section>
 
@@ -633,11 +570,11 @@
             <p>We're working with a small group of CPA firms to refine our intelligence briefings.<br>If this sounds like something your firm needs, let's connect.</p>
             
             <div class="contact-options">
-                <div class="contact-form" id="contactForm-container">
+                <div class="contact-form">
                     <h3>Send Us a Message</h3>
                     <p>Tell us about your firm and we'll follow up within 24 hours.</p>
                     
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdkoedwe" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/xdkoedwe" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -724,14 +661,12 @@
             });
         });
 
-        // Smooth scroll for email fallback link
+        // Smooth scroll for CTA button
         document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
-            if (this.textContent.includes('Email')) {
-                e.preventDefault();
-                document.getElementById('contact').scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+            e.preventDefault();
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>
