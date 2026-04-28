@@ -68,18 +68,25 @@
             display: inline-block;
             background: #0066cc;
             color: #ffffff;
-            padding: 16px 40px;
-            font-size: 18px;
-            font-weight: 600;
+            padding: 18px 48px;
+            font-size: 20px;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 6px;
-            transition: background 0.3s ease;
+            border-radius: 8px;
+            transition: all 0.3s ease;
             cursor: pointer;
             border: none;
+            box-shadow: 0 4px 14px rgba(0, 102, 204, 0.4);
         }
 
         .cta-button:hover {
             background: #0052a3;
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
         }
 
         .problem {
@@ -273,13 +280,67 @@
             opacity: 0.95;
         }
 
-        .contact-form {
-            max-width: 500px;
+        .contact-options {
+            max-width: 700px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .contact-card {
             background: white;
-            padding: 30px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .contact-card h3 {
+            color: #1a1a1a;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .contact-card p {
+            color: #4a4a4a;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .email-cta {
+            background: #f8f9fa;
+            border: 2px solid #0066cc;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin-bottom: 20px;
+        }
+
+        .email-cta .email-address {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0066cc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            word-break: break-all;
+        }
+
+        .email-cta .email-address:hover {
+            color: #0052a3;
+        }
+
+        .email-cta .helper-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .contact-form {
+            max-width: 100%;
+            background: white;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         .form-group {
@@ -298,11 +359,12 @@
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
             font-size: 16px;
             font-family: inherit;
+            transition: border-color 0.3s ease;
         }
 
         .form-group input:focus,
@@ -321,28 +383,33 @@
             width: 100%;
             background: #0066cc;
             color: white;
-            padding: 14px;
-            font-size: 16px;
-            font-weight: 600;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: 700;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 102, 204, 0.3);
         }
 
         .submit-button:hover {
             background: #0052a3;
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+            transform: translateY(-2px);
         }
 
         .submit-button:disabled {
             background: #ccc;
             cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
         }
 
         .form-status {
             margin-top: 15px;
             padding: 12px;
-            border-radius: 4px;
+            border-radius: 6px;
             text-align: center;
             font-weight: 600;
         }
@@ -357,15 +424,12 @@
             color: #721c24;
         }
 
-        .email-fallback {
-            margin-top: 20px;
-            color: white;
-            font-size: 14px;
-        }
-
-        .email-fallback a {
-            color: white;
-            text-decoration: underline;
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            color: #999;
+            font-weight: 600;
+            font-size: 16px;
         }
 
         footer {
@@ -402,8 +466,17 @@
                 font-size: 28px;
             }
 
-            .contact-form {
-                padding: 20px;
+            .contact-card {
+                padding: 30px 20px;
+            }
+
+            .email-cta .email-address {
+                font-size: 18px;
+            }
+
+            .cta-button {
+                padding: 16px 32px;
+                font-size: 18px;
             }
         }
     </style>
@@ -419,7 +492,7 @@
         <div class="container">
             <h1>Know What Matters.<br>Every Morning.</h1>
             <p class="subheading">Daily intelligence briefings that help CPA firm owners make better decisions. No new software to learn. No complexity. Just insights delivered to your inbox.</p>
-            <a href="#contact" class="cta-button">Start a Conversation</a>
+            <a href="#contact" class="cta-button">Start a Conversation →</a>
         </div>
     </section>
 
@@ -521,35 +594,49 @@
             <h2>Let's Start a Conversation</h2>
             <p>We're working with a small group of CPA firms to refine our intelligence briefings.<br>If this sounds like something your firm needs, let's talk.</p>
             
-            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdkoedwe" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="contact-options">
+                <div class="contact-card">
+                    <h3>📧 Email Us Directly</h3>
+                    <p>Fastest way to reach us. We respond to every message within 24 hours.</p>
+                    <div class="email-cta">
+                        <a href="mailto:hello@covenantsystems.ai" class="email-address">hello@covenantsystems.ai</a>
+                        <p class="helper-text">Click to open in your email client, or copy and paste the address above.</p>
+                    </div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="firm">Firm Name *</label>
-                    <input type="text" id="firm" name="firm" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Tell us about your biggest intelligence challenge</label>
-                    <textarea id="message" name="message" placeholder="e.g., Keeping up with tax law changes, understanding client industry trends, knowing what technology to adopt..."></textarea>
-                </div>
-                
-                <button type="submit" class="submit-button">Send Message</button>
-                
-                <div id="formStatus"></div>
-            </form>
 
-            <p class="email-fallback">
-                Or email us directly at <a href="mailto:hello@covenantsystems.ai">hello@covenantsystems.ai</a>
-            </p>
+                <div class="divider">OR</div>
+
+                <div class="contact-card">
+                    <h3>📝 Send Us a Message</h3>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdkoedwe" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="firm">Firm Name *</label>
+                            <input type="text" id="firm" name="firm" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Tell us about your biggest intelligence challenge</label>
+                            <textarea id="message" name="message" placeholder="e.g., Keeping up with tax law changes, understanding client industry trends, knowing what technology to adopt..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Send Message →</button>
+                        
+                        <div id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -589,7 +676,7 @@
             .then(response => {
                 if (response.ok) {
                     formStatus.className = 'form-status success';
-                    formStatus.textContent = 'Message sent! We\'ll be in touch within 24 hours.';
+                    formStatus.textContent = '✓ Message sent! We\'ll be in touch within 24 hours.';
                     form.reset();
                 } else {
                     throw new Error('Network response was not ok');
@@ -601,7 +688,7 @@
             })
             .finally(() => {
                 submitButton.disabled = false;
-                submitButton.textContent = 'Send Message';
+                submitButton.textContent = 'Send Message →';
             });
         });
 
