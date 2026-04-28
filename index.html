@@ -89,6 +89,33 @@
             transform: translateY(0);
         }
 
+        .cta-button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button-secondary {
+            display: inline-block;
+            background: transparent;
+            color: #0066cc;
+            padding: 18px 48px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid #0066cc;
+            box-shadow: none;
+        }
+
+        .cta-button-secondary:hover {
+            background: #f0f5ff;
+            transform: translateY(-2px);
+        }
+
         .problem {
             background: #f8f9fa;
             padding: 60px 0;
@@ -285,102 +312,26 @@
             margin: 0 auto;
         }
 
-        /* Three-option contact layout */
-        .contact-methods-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .contact-option {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .contact-option h3 {
-            color: #1a1a1a;
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .contact-option p {
-            color: #4a4a4a;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-
-        .contact-option-cta {
-            display: inline-block;
-            background: #0066cc;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .contact-option-cta:hover {
-            background: #0052a3;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
-        }
-
-        .contact-option-cta.phone {
-            background: #0066cc;
-        }
-
-        .contact-option-cta.phone:hover {
-            background: #0052a3;
-        }
-
-        .contact-option-cta.email {
-            background: #0066cc;
-        }
-
-        .contact-option-cta.email:hover {
-            background: #0052a3;
-        }
-
-        .contact-card {
+        .contact-form {
             background: white;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.15);
             max-width: 600px;
-            margin: 0 auto;
+            margin: 30px auto 0;
         }
 
-        .contact-card h3 {
+        .contact-form h3 {
             color: #1a1a1a;
             font-size: 24px;
             margin-bottom: 15px;
             font-weight: 700;
         }
 
-        .contact-card p {
+        .contact-form p {
             color: #4a4a4a;
             margin-bottom: 20px;
             font-size: 16px;
-        }
-
-        .contact-form {
-            max-width: 100%;
-            background: white;
-            padding: 0;
-            border-radius: 0;
-            box-shadow: none;
         }
 
         .form-group {
@@ -464,28 +415,51 @@
             color: #721c24;
         }
 
-        .form-divider {
+        .divider {
             text-align: center;
             margin: 40px 0;
             position: relative;
         }
 
-        .form-divider::before {
+        .divider::before {
             content: "";
             position: absolute;
             top: 50%;
             left: 0;
             right: 0;
             height: 1px;
-            background: #ddd;
+            background: rgba(255,255,255,0.3);
         }
 
-        .form-divider span {
-            background: white;
+        .divider span {
+            background: #0066cc;
             padding: 0 15px;
             position: relative;
-            color: #999;
+            color: rgba(255,255,255,0.8);
             font-size: 14px;
+        }
+
+        .contact-fallback {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .contact-fallback p {
+            color: #4a4a4a;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .contact-fallback a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-fallback a:hover {
+            text-decoration: underline;
         }
 
         footer {
@@ -522,21 +496,22 @@
                 font-size: 28px;
             }
 
-            .contact-option {
-                padding: 30px 20px;
-            }
-
-            .contact-card {
-                padding: 30px 20px;
-            }
-
             .cta-button {
                 padding: 16px 32px;
                 font-size: 18px;
             }
 
-            .contact-methods-grid {
-                grid-template-columns: 1fr;
+            .cta-button-secondary {
+                padding: 16px 32px;
+                font-size: 18px;
+            }
+
+            .cta-button-group {
+                gap: 10px;
+            }
+
+            .contact-form {
+                padding: 30px 20px;
             }
         }
     </style>
@@ -552,7 +527,10 @@
         <div class="container">
             <h1>Know What Matters.<br>Every Morning.</h1>
             <p class="subheading">Daily intelligence briefings that help CPA firm owners make better decisions. No new software to learn. No complexity. Just insights delivered to your inbox.</p>
-            <a href="#contact" class="cta-button">Start a Conversation →</a>
+            <div class="cta-button-group">
+                <a href="https://cal.com/covenantsystems/call" class="cta-button">Schedule a Call →</a>
+                <a href="#contact" class="cta-button-secondary">Email Instead</a>
+            </div>
         </div>
     </section>
 
@@ -652,38 +630,12 @@
     <section id="contact" class="cta-section">
         <div class="container">
             <h2>Let's Start a Conversation</h2>
-            <p>We're working with a small group of CPA firms to refine our intelligence briefings.<br>If this sounds like something your firm needs, let's talk.</p>
+            <p>We're working with a small group of CPA firms to refine our intelligence briefings.<br>If this sounds like something your firm needs, let's connect.</p>
             
             <div class="contact-options">
-                <!-- Three contact methods -->
-                <div class="contact-methods-grid">
-                    <div class="contact-option">
-                        <h3>📧 Email Us</h3>
-                        <p>Send a quick message and we'll respond within 24 hours.</p>
-                        <a href="mailto:hello@covenantsystems.ai?subject=Covenant%20Systems%20Inquiry" class="contact-option-cta email">hello@covenantsystems.ai</a>
-                    </div>
-                    
-                    <div class="contact-option">
-                        <h3>📞 Call Us</h3>
-                        <p>Prefer to talk? We're available for quick conversations.</p>
-                        <a href="tel:+19192851819" class="contact-option-cta phone">(919) 285-1819</a>
-                    </div>
-                    
-                    <div class="contact-option">
-                        <h3>📋 Send a Form</h3>
-                        <p>Tell us about your firm and we'll follow up shortly.</p>
-                        <a href="#form" class="contact-option-cta" onclick="document.getElementById('contactForm').scrollIntoView({behavior:'smooth'}); return false;">Fill Out Form</a>
-                    </div>
-                </div>
-
-                <!-- Form section below -->
-                <div class="form-divider">
-                    <span>Or tell us more about your firm</span>
-                </div>
-
-                <div class="contact-card">
-                    <h3 id="form">Share Your Details</h3>
-                    <p>Help us understand your firm better so we can tailor our briefings.</p>
+                <div class="contact-form" id="contactForm-container">
+                    <h3>Send Us a Message</h3>
+                    <p>Tell us about your firm and we'll follow up within 24 hours.</p>
                     
                     <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdkoedwe" method="POST">
                         <div class="form-group">
@@ -710,6 +662,11 @@
                         
                         <div id="formStatus"></div>
                     </form>
+
+                    <div class="contact-fallback">
+                        <p>Or email us directly:</p>
+                        <a href="mailto:hello@covenantsystems.ai?subject=Covenant%20Systems%20Inquiry">hello@covenantsystems.ai</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -767,12 +724,14 @@
             });
         });
 
-        // Smooth scroll for CTA button
+        // Smooth scroll for email fallback link
         document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('contact').scrollIntoView({
-                behavior: 'smooth'
-            });
+            if (this.textContent.includes('Email')) {
+                e.preventDefault();
+                document.getElementById('contact').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     </script>
 </body>
