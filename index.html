@@ -314,6 +314,12 @@
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .email-cta:hover {
+            border-color: #0052a3;
+            box-shadow: 0 2px 8px rgba(0, 102, 204, 0.2);
         }
 
         .email-cta .email-address {
@@ -328,9 +334,43 @@
 
         .email-cta .email-address:hover {
             color: #0052a3;
+            text-decoration: underline;
         }
 
         .email-cta .helper-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .phone-cta {
+            background: #f8f9fa;
+            border: 2px solid #28a745;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .phone-cta:hover {
+            border-color: #218838;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
+        }
+
+        .phone-cta .phone-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #28a745;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .phone-cta .phone-number:hover {
+            color: #218838;
+            text-decoration: underline;
+        }
+
+        .phone-cta .helper-text {
             font-size: 14px;
             color: #666;
         }
@@ -432,6 +472,13 @@
             font-size: 16px;
         }
 
+        .quick-contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
         footer {
             background: #1a1a1a;
             color: #ffffff;
@@ -470,13 +517,18 @@
                 padding: 30px 20px;
             }
 
-            .email-cta .email-address {
+            .email-cta .email-address,
+            .phone-cta .phone-number {
                 font-size: 18px;
             }
 
             .cta-button {
                 padding: 16px 32px;
                 font-size: 18px;
+            }
+
+            .quick-contact-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -596,12 +648,22 @@
             
             <div class="contact-options">
                 <div class="contact-card">
-                    <h3>📧 Email Us Directly</h3>
-                    <p>Fastest way to reach us. We respond to every message within 24 hours.</p>
-                    <div class="email-cta">
-                        <a href="mailto:hello@covenantsystems.ai" class="email-address">hello@covenantsystems.ai</a>
-                        <p class="helper-text">Click to open in your email client, or copy and paste the address above.</p>
+                    <h3>📞 Reach Out Directly</h3>
+                    <p>Choose the method that works best for you. We respond to every inquiry within 24 hours.</p>
+                    
+                    <div class="quick-contact-grid">
+                        <a href="mailto:hello@covenantsystems.ai" class="email-cta">
+                            <div class="email-address">📧 Email Us</div>
+                            <div class="helper-text">hello@covenantsystems.ai</div>
+                        </a>
+                        
+                        <a href="tel:+19192851819" class="phone-cta">
+                            <div class="phone-number">📞 Call Us</div>
+                            <div class="helper-text">(919) 285-1819</div>
+                        </a>
                     </div>
+                    
+                    <p style="font-size: 14px; color: #666; margin-top: 10px; margin-bottom: 0;">Click either button above — they'll open your phone or email app directly.</p>
                 </div>
 
                 <div class="divider">OR</div>
