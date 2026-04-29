@@ -1,411 +1,411 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prospect Response Playbook — Covenant Systems</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            padding: 20px 0;
-            border-bottom: 2px solid #0066cc;
-            margin-bottom: 40px;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a1a1a;
-            text-decoration: none;
-        }
-        h1 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: #1a1a1a;
-        }
-        h2 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: #0066cc;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-        }
-        h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-        .meta {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 30px;
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 6px;
-        }
-        .meta p {
-            margin: 5px 0;
-        }
-        .question-block {
-            background: #f8f9fa;
-            border-left: 4px solid #0066cc;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        .response-template {
-            background: #f0f7ff;
-            padding: 20px;
-            border-radius: 6px;
-            margin: 15px 0;
-            font-family: 'Monaco', 'Courier New', monospace;
-            font-size: 14px;
-            line-height: 1.5;
-            border-left: 4px solid #0066cc;
-        }
-        .do-list, .dont-list {
-            margin: 20px 0;
-            padding: 0 20px;
-        }
-        .do-list li {
-            list-style: none;
-            margin: 10px 0;
-            padding-left: 30px;
-            position: relative;
-        }
-        .do-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #28a745;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .dont-list li:before {
-            content: "✗";
-            position: absolute;
-            left: 0;
-            color: #dc3545;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .dont-list li {
-            list-style: none;
-            margin: 10px 0;
-            padding-left: 30px;
-            position: relative;
-        }
-        .table-container {
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-        th {
-            background: #0066cc;
-            color: white;
-            padding: 12px;
-            text-align: left;
-            font-weight: 600;
-        }
-        td {
-            padding: 12px;
-            border-bottom: 1px solid #ddd;
-        }
-        tr:nth-child(even) {
-            background: #f8f9fa;
-        }
-        .highlight {
-            background: #fff3cd;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 20px 0;
-            border-left: 4px solid #ffc107;
-        }
-        .documents-list {
-            background: #e8f5e9;
-            padding: 20px;
-            border-radius: 6px;
-            margin: 20px 0;
-        }
-        .documents-list ul {
-            margin-left: 20px;
-        }
-        .documents-list li {
-            margin: 10px 0;
-        }
-        footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid #ddd;
-            color: #666;
-            font-size: 12px;
-        }
-        .version {
-            color: #999;
-            font-size: 12px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <a href="/" class="logo">← Back to Covenant Systems</a>
-        </header>
-
-        <h1>Prospect Response Playbook</h1>
-        <p style="font-size: 18px; color: #666;">Internal Operations Document</p>
-
-        <div class="meta">
-            <p><strong>Document Version:</strong> 1.0</p>
-            <p><strong>Created:</strong> 2026-04-28</p>
-            <p><strong>Audience:</strong> BEZ, ELIAS, LUKE, DeVere</p>
-            <p><strong>Status:</strong> LIVE — Use for all first-contact responses</p>
-        </div>
-
-        <h2>Purpose</h2>
-        <p>This playbook ensures that when the first CPA firm prospect reaches out (via email, phone, or form), we respond with:</p>
-        <ul style="margin-left: 20px; margin-top: 15px;">
-            <li>Speed (24 hours or less)</li>
-            <li>Consistency (same messaging across all channels)</li>
-            <li>Legal compliance (no overclaims, proper disclosures)</li>
-            <li>Clear next steps (design partner agreement path)</li>
-        </ul>
-
-        <h2>Inbound Channels & Monitoring</h2>
-        <p><strong>Where Prospects Can Reach Us:</strong></p>
-        <ul style="margin-left: 20px; margin-top: 15px;">
-            <li><strong>Email:</strong> hello@covenantsystems.ai (form submissions and direct email)</li>
-            <li><strong>Phone:</strong> [phone pending setup] (direct call)</li>
-            <li><strong>Web Form:</strong> covenantsystems.ai/contact (Formspree integration)</li>
-        </ul>
-
-        <div class="highlight">
-            <strong>⚠️ CRITICAL: Inbox Assignment</strong>
-            <p style="margin-top: 10px;"><strong>hello@covenantsystems.ai</strong> — DeVere or LUKE monitors this inbox (needs explicit assignment). This is where form submissions and direct prospect emails arrive.</p>
-        </div>
-
-        <h2>Top 5 Prospect Questions & Response Templates</h2>
-
-        <div class="question-block">
-            <h3>QUESTION 1: "What's your security posture? Do you have SOC 2?"</h3>
-            <p><strong>Response (Email/Form Follow-up):</strong></p>
-            <div class="response-template">Thanks for your interest in Covenant Systems. Great question on security.
-
-We are a pre-SOC 2 company — SOC 2 is a growth-stage investment we're planning for later this year. However, we have comprehensive security controls in place today:
-
-• AES-256 encryption for all data in transit and at rest
-• TLS 1.3 for all API connections
-• AWS infrastructure with industry-standard access controls
-• 90-day retention for briefing data; 24-month retention for derived intelligence patterns
-• Documented Written Information Security Program (WISP) available for your review
-• We do NOT store client data — intelligence only, no integration needed
-
-Most CPA firms in the pilot phase accept our current security posture. SOC 2 becomes important when you integrate with your core systems — which we don't require.
-
-For your specific security requirements, I've attached our WISP, Privacy Policy, and Terms of Service. Happy to discuss any specific controls your firm requires.</div>
-            <p><strong>Documents to Attach:</strong></p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li>WISP v2 (Written Information Security Program)</li>
-                <li>Privacy Policy</li>
-                <li>Terms of Service</li>
-                <li>Vendor Due Diligence Responses (if they send a vendor form)</li>
-            </ul>
-            <p><strong>Next Step:</strong> Schedule a 15-minute call to discuss their specific requirements.</p>
-        </div>
-
-        <div class="question-block">
-            <h3>QUESTION 2: "How is this different from Artifact AI / [Competitor]?"</h3>
-            <p><strong>Response (Email/Phone):</strong></p>
-            <div class="response-template">Great question. Here's the difference:
-
-OUR APPROACH: We deliver a daily intelligence briefing to your inbox. No new software. No dashboards. No logins. We read the regulatory sources, industry publications, and market data that matter to your firm — and send you a concise summary every morning. You decide what to do with the intelligence.
-
-COMPETITOR APPROACH: They typically automate workflows or help you do existing tasks faster (e.g., automate tax return prep, speed up bookkeeping). They require software integration and usually pull data from your systems.
-
-WHY IT MATTERS: You're drowning in information, not in workflow steps. The intelligence you need exists — it's just scattered across 100 different sources. We're the daily digest. They're the efficiency layer. Most CPA firms benefit from BOTH, but you should start with intelligence because it doesn't require deployment risk.</div>
-            <p><strong>Talking Points (if on phone):</strong></p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li>Ask what their biggest intelligence challenge is</li>
-                <li>Listen for: "Keeping up with tax changes," "Knowing what clients will ask about," "Industry trends"</li>
-                <li>Mirror back: "That's exactly why we built this — to answer those questions before you're in the middle of a client conversation"</li>
-            </ul>
-        </div>
-
-        <div class="question-block">
-            <h3>QUESTION 3: "Do you need access to our QuickBooks / Tax software / Client data?"</h3>
-            <p><strong>Response (Email/Phone):</strong></p>
-            <div class="response-template">No. Not at all. That's actually a core design principle for us.
-
-We deliver business intelligence — regulatory updates, tax law changes, industry trends, market data. We don't need integration with your core systems. No API keys. No data exports. No risk.
-
-This is why we're a good first-step AI investment for your firm. You get the intelligence benefit with zero deployment risk.</div>
-            <p><strong>Why This Matters:</strong> CPAs are nervous about data access. This is your biggest trust-building line.</p>
-            <p><strong>Next Step:</strong> If they're convinced this is low-risk, ask: "Would you be interested in a small pilot?"</p>
-        </div>
-
-        <div class="question-block">
-            <h3>QUESTION 4: "How much does this cost? What's the commitment?"</h3>
-            <p><strong>Response (Email/Phone):</strong></p>
-            <div class="response-template">We're still defining pricing with our first customers — we're in a design partner / pilot phase right now.
-
-For a design partner arrangement, we're looking for CPA firms who are willing to:
-• Use the daily briefing for 60-90 days
-• Give us honest feedback on what's working and what's not
-• Help us shape the product based on real-world use
-
-The goal is mutual: you get early-stage intelligence at a favorable rate, and we get the feedback that makes us better.
-
-Does a pilot arrangement sound interesting to your firm?</div>
-            <p><strong>Talking Point:</strong> Don't quote a number yet. Lock in the relationship first. Pricing conversation comes after they've seen value.</p>
-            <p><strong>Next Step:</strong> If interested, send Design Partner Agreement to review.</p>
-        </div>
-
-        <div class="question-block">
-            <h3>QUESTION 5: "Who are you? Is this a real company?"</h3>
-            <p><strong>Response (Email/Phone):</strong></p>
-            <div class="response-template">Absolutely. Covenant Systems LLC is a North Carolina limited liability company, founded in 2026, focused exclusively on serving CPA firms.
-
-We were built by a team with deep expertise in business intelligence and AI, specifically for the accounting profession. This isn't a side project — it's our full focus.
-
-Our approach is simple: read what matters, summarize what's important, deliver it to your inbox. No hype. No overclaims. Just useful intelligence.
-
-You can verify our legitimacy here:
-• Website: covenantsystems.ai
-• Legal: We're registered as Covenant Systems LLC in North Carolina
-• Contact: hello@covenantsystems.ai or [phone pending setup]
-
-Happy to answer any other questions about who we are.</div>
-            <p><strong>Documents to Provide:</strong></p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li>Privacy Policy (shows our approach to data)</li>
-                <li>Terms of Service (shows we're serious about compliance)</li>
-                <li>FTC AI Disclosure (shows we're transparent about AI use)</li>
-            </ul>
-        </div>
-
-        <h2>Response SLA & Escalation</h2>
-        
-        <h3>Response Timeline</h3>
-        <ul style="margin-left: 20px;">
-            <li><strong>Phone call:</strong> Answer same day (or call back within 4 hours)</li>
-            <li><strong>Email/Form:</strong> Respond within 24 hours with answer + next steps</li>
-            <li><strong>Multiple follow-ups:</strong> Each response within 24 hours</li>
-        </ul>
-
-        <h3>Escalation Logic</h3>
-        <p><strong>Who responds?</strong></p>
-        
-        <p><strong>Form submission (hello@):</strong> DeVere OR LUKE sees it first. Route appropriately:</p>
-        <ul style="margin-left: 20px;">
-            <li>Security question → Send SOL's response templates</li>
-            <li>Pricing/Pilot question → DeVere decides on commitment level</li>
-            <li>Time-sensitive (they give deadline) → Escalate to DeVere immediately</li>
-        </ul>
-
-        <p style="margin-top: 15px;"><strong>Phone call:</strong> DeVere or ELIAS answers</p>
-        <ul style="margin-left: 20px;">
-            <li>If it's a prospect: Collect name, firm, pain point, next step</li>
-            <li>If it's a security question: Answer using templates, offer call follow-up</li>
-            <li>If it's a "close the deal" call: Get commitment to Design Partner Agreement</li>
-        </ul>
-
-        <h2>Design Partner Agreement Path</h2>
-        <p>Once a prospect expresses interest in a pilot:</p>
-        
-        <h3>Step 1: Send Design Partner Agreement</h3>
-        <p>Cover message: "We'd like to move forward with a small pilot. Here's the agreement that outlines the arrangement."</p>
-
-        <h3>Step 2: Review Loop</h3>
-        <p>Prospect reviews agreement → raises questions (likely: data handling, timeline, what they need to do) → respond with clarity → SOL reviews any edits before signature</p>
-
-        <h3>Step 3: Execution</h3>
-        <p>Prospect signs → we counter-sign → pilot begins</p>
-
-        <h3>Step 4: Launch Intelligence Briefings</h3>
-        <p>Set up daily briefing delivery → first briefing within 24 hours → collect feedback every 2 weeks</p>
-
-        <h2>Documents to Have Ready for Every Prospect</h2>
-        <div class="documents-list">
-            <p>All stored and ready to send immediately:</p>
-            <ul>
-                <li><strong>Privacy Policy</strong> — Data handling transparency</li>
-                <li><strong>Terms of Service</strong> — Service agreement</li>
-                <li><strong>WISP v2</strong> — Written Information Security Program</li>
-                <li><strong>Design Partner Agreement</strong> — Pilot arrangement</li>
-                <li><strong>FTC AI Disclosure Brief</strong> — We're transparent about AI use</li>
-                <li><strong>Sample Morning Briefing Mockup</strong> — Show what value looks like</li>
-                <li><strong>Vendor Due Diligence Responses</strong> — If they send a vendor form</li>
-            </ul>
-            <p style="margin-top: 15px;"><strong>All of these are drafted and ready to email. No delays.</strong></p>
-        </div>
-
-        <h2>Critical Reminders</h2>
-        
-        <h3>DO:</h3>
-        <div class="do-list">
-            <ul>
-                <li>Respond fast (within 24 hours)</li>
-                <li>Use the response templates (for consistency)</li>
-                <li>Send documents proactively (security, privacy, terms)</li>
-                <li>Ask about their pain points (so we learn)</li>
-                <li>Offer a pilot, not a commitment (lower friction)</li>
-                <li>Copy SOL on any legal questions</li>
-                <li>Escalate to DeVere if they want to close a deal</li>
-            </ul>
-        </div>
-
-        <h3>DON'T:</h3>
-        <div class="dont-list">
-            <ul>
-                <li>Overclaim what we do ("AI that reads everything")</li>
-                <li>Promise pricing or timeline we haven't committed to</li>
-                <li>Suggest we need access to their data</li>
-                <li>Use filler language or buzzwords</li>
-                <li>Delay response (24 hours is the SLA)</li>
-                <li>Make unilateral decisions about pilot commitment</li>
-            </ul>
-        </div>
-
-        <h2>Next Steps for Team</h2>
-        <p>This playbook is now LIVE. When the first prospect contact comes in:</p>
-        <ol style="margin-left: 20px; margin-top: 15px;">
-            <li><strong>Whoever sees the form/email first:</strong> Acknowledge receipt within 1 hour (if possible)</li>
-            <li><strong>Within 24 hours:</strong> Send appropriate response template + documents</li>
-            <li><strong>Every 24 hours after:</strong> Follow up if no response</li>
-            <li><strong>Always:</strong> Copy SOL on responses that involve legal/compliance questions</li>
-        </ol>
-
-        <footer>
-            <p>Questions or updates? Contact SOL (sol@covenantsystems.ai)</p>
-            <div class="version">
-                <p><strong>Version History:</strong></p>
-                <p>v1.0 — 2026-04-28 — Initial playbook created by SOL</p>
-            </div>
-        </footer>
-    </div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prospect Response Playbook — Covenant Systems</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            padding: 20px 0;
+            border-bottom: 2px solid #0066cc;
+            margin-bottom: 40px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #0066cc;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        .meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .meta p {
+            margin: 5px 0;
+        }
+        .question-block {
+            background: #f8f9fa;
+            border-left: 4px solid #0066cc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .response-template {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            border-left: 4px solid #0066cc;
+        }
+        .do-list, .dont-list {
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        .do-list li {
+            list-style: none;
+            margin: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .do-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .dont-list li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #dc3545;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .dont-list li {
+            list-style: none;
+            margin: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th {
+            background: #0066cc;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .documents-list {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .documents-list ul {
+            margin-left: 20px;
+        }
+        .documents-list li {
+            margin: 10px 0;
+        }
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 12px;
+        }
+        .version {
+            color: #999;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/" class="logo">← Back to Covenant Systems</a>
+        </header>
+
+        <h1>Prospect Response Playbook</h1>
+        <p style="font-size: 18px; color: #666;">Internal Operations Document</p>
+
+        <div class="meta">
+            <p><strong>Document Version:</strong> 1.0</p>
+            <p><strong>Created:</strong> 2026-04-28</p>
+            <p><strong>Audience:</strong> BEZ, ELIAS, LUKE, DeVere</p>
+            <p><strong>Status:</strong> LIVE — Use for all first-contact responses</p>
+        </div>
+
+        <h2>Purpose</h2>
+        <p>This playbook ensures that when the first CPA firm prospect reaches out (via email or form), we respond with:</p>
+        <ul style="margin-left: 20px; margin-top: 15px;">
+            <li>Speed (24 hours or less)</li>
+            <li>Consistency (same messaging across all channels)</li>
+            <li>Legal compliance (no overclaims, proper disclosures)</li>
+            <li>Clear next steps (design partner agreement path)</li>
+        </ul>
+
+        <h2>Inbound Channels & Monitoring</h2>
+        <p><strong>Where Prospects Can Reach Us:</strong></p>
+        <ul style="margin-left: 20px; margin-top: 15px;">
+            <li><strong>Email:</strong> hello@covenantsystems.ai (form submissions and direct email)</li>
+            <!-- Phone channel: pending Vapi setup -->
+            <li><strong>Web Form:</strong> covenantsystems.ai/contact (Formspree integration)</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>⚠️ CRITICAL: Inbox Assignment</strong>
+            <p style="margin-top: 10px;"><strong>hello@covenantsystems.ai</strong> — DeVere or LUKE monitors this inbox (needs explicit assignment). This is where form submissions and direct prospect emails arrive.</p>
+        </div>
+
+        <h2>Top 5 Prospect Questions & Response Templates</h2>
+
+        <div class="question-block">
+            <h3>QUESTION 1: "What's your security posture? Do you have SOC 2?"</h3>
+            <p><strong>Response (Email/Form Follow-up):</strong></p>
+            <div class="response-template">Thanks for your interest in Covenant Systems. Great question on security.
+
+We are a pre-SOC 2 company — SOC 2 is a growth-stage investment we're planning for later this year. However, we have comprehensive security controls in place today:
+
+• AES-256 encryption for all data in transit and at rest
+• TLS 1.3 for all API connections
+• AWS infrastructure with industry-standard access controls
+• 90-day retention for briefing data; 24-month retention for derived intelligence patterns
+• Documented Written Information Security Program (WISP) available for your review
+• We do NOT store client data — intelligence only, no integration needed
+
+Most CPA firms in the pilot phase accept our current security posture. SOC 2 becomes important when you integrate with your core systems — which we don't require.
+
+For your specific security requirements, I've attached our WISP, Privacy Policy, and Terms of Service. Happy to discuss any specific controls your firm requires.</div>
+            <p><strong>Documents to Attach:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>WISP v2 (Written Information Security Program)</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+                <li>Vendor Due Diligence Responses (if they send a vendor form)</li>
+            </ul>
+            <p><strong>Next Step:</strong> Schedule a 15-minute call to discuss their specific requirements.</p>
+        </div>
+
+        <div class="question-block">
+            <h3>QUESTION 2: "How is this different from Artifact AI / [Competitor]?"</h3>
+            <p><strong>Response (Email):</strong></p>
+            <div class="response-template">Great question. Here's the difference:
+
+OUR APPROACH: We deliver a daily intelligence briefing to your inbox. No new software. No dashboards. No logins. We read the regulatory sources, industry publications, and market data that matter to your firm — and send you a concise summary every morning. You decide what to do with the intelligence.
+
+COMPETITOR APPROACH: They typically automate workflows or help you do existing tasks faster (e.g., automate tax return prep, speed up bookkeeping). They require software integration and usually pull data from your systems.
+
+WHY IT MATTERS: You're drowning in information, not in workflow steps. The intelligence you need exists — it's just scattered across 100 different sources. We're the daily digest. They're the efficiency layer. Most CPA firms benefit from BOTH, but you should start with intelligence because it doesn't require deployment risk.</div>
+            <p><strong>Talking Points (if on call):</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Ask what their biggest intelligence challenge is</li>
+                <li>Listen for: "Keeping up with tax changes," "Knowing what clients will ask about," "Industry trends"</li>
+                <li>Mirror back: "That's exactly why we built this — to answer those questions before you're in the middle of a client conversation"</li>
+            </ul>
+        </div>
+
+        <div class="question-block">
+            <h3>QUESTION 3: "Do you need access to our QuickBooks / Tax software / Client data?"</h3>
+            <p><strong>Response (Email):</strong></p>
+            <div class="response-template">No. Not at all. That's actually a core design principle for us.
+
+We deliver business intelligence — regulatory updates, tax law changes, industry trends, market data. We don't need integration with your core systems. No API keys. No data exports. No risk.
+
+This is why we're a good first-step AI investment for your firm. You get the intelligence benefit with zero deployment risk.</div>
+            <p><strong>Why This Matters:</strong> CPAs are nervous about data access. This is your biggest trust-building line.</p>
+            <p><strong>Next Step:</strong> If they're convinced this is low-risk, ask: "Would you be interested in a small pilot?"</p>
+        </div>
+
+        <div class="question-block">
+            <h3>QUESTION 4: "How much does this cost? What's the commitment?"</h3>
+            <p><strong>Response (Email):</strong></p>
+            <div class="response-template">We're still defining pricing with our first customers — we're in a design partner / pilot phase right now.
+
+For a design partner arrangement, we're looking for CPA firms who are willing to:
+• Use the daily briefing for 60-90 days
+• Give us honest feedback on what's working and what's not
+• Help us shape the product based on real-world use
+
+The goal is mutual: you get early-stage intelligence at a favorable rate, and we get the feedback that makes us better.
+
+Does a pilot arrangement sound interesting to your firm?</div>
+            <p><strong>Talking Point:</strong> Don't quote a number yet. Lock in the relationship first. Pricing conversation comes after they've seen value.</p>
+            <p><strong>Next Step:</strong> If interested, send Design Partner Agreement to review.</p>
+        </div>
+
+        <div class="question-block">
+            <h3>QUESTION 5: "Who are you? Is this a real company?"</h3>
+            <p><strong>Response (Email):</strong></p>
+            <div class="response-template">Absolutely. Covenant Systems LLC is a North Carolina limited liability company, founded in 2026, focused exclusively on serving CPA firms.
+
+We were built by a team with deep expertise in business intelligence and AI, specifically for the accounting profession. This isn't a side project — it's our full focus.
+
+Our approach is simple: read what matters, summarize what's important, deliver it to your inbox. No hype. No overclaims. Just useful intelligence.
+
+You can verify our legitimacy here:
+• Website: covenantsystems.ai
+• Legal: We're registered as Covenant Systems LLC in North Carolina
+• Contact: hello@covenantsystems.ai
+
+Happy to answer any other questions about who we are.</div>
+            <p><strong>Documents to Provide:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Privacy Policy (shows our approach to data)</li>
+                <li>Terms of Service (shows we're serious about compliance)</li>
+                <li>FTC AI Disclosure (shows we're transparent about AI use)</li>
+            </ul>
+        </div>
+
+        <h2>Response SLA & Escalation</h2>
+        
+        <h3>Response Timeline</h3>
+        <ul style="margin-left: 20px;">
+            <!-- Phone: pending Vapi -->
+            <li><strong>Email/Form:</strong> Respond within 24 hours with answer + next steps</li>
+            <li><strong>Multiple follow-ups:</strong> Each response within 24 hours</li>
+        </ul>
+
+        <h3>Escalation Logic</h3>
+        <p><strong>Who responds?</strong></p>
+        
+        <p><strong>Form submission (hello@):</strong> DeVere OR LUKE sees it first. Route appropriately:</p>
+        <ul style="margin-left: 20px;">
+            <li>Security question → Send SOL's response templates</li>
+            <li>Pricing/Pilot question → DeVere decides on commitment level</li>
+            <li>Time-sensitive (they give deadline) → Escalate to DeVere immediately</li>
+        </ul>
+
+        <!-- Phone: pending Vapi -->
+        <ul style="margin-left: 20px;">
+            <li>If it's a prospect: Collect name, firm, pain point, next step</li>
+            <li>If it's a security question: Answer using templates, offer call follow-up</li>
+            <li>If it's a "close the deal" call: Get commitment to Design Partner Agreement</li>
+        </ul>
+
+        <h2>Design Partner Agreement Path</h2>
+        <p>Once a prospect expresses interest in a pilot:</p>
+        
+        <h3>Step 1: Send Design Partner Agreement</h3>
+        <p>Cover message: "We'd like to move forward with a small pilot. Here's the agreement that outlines the arrangement."</p>
+
+        <h3>Step 2: Review Loop</h3>
+        <p>Prospect reviews agreement → raises questions (likely: data handling, timeline, what they need to do) → respond with clarity → SOL reviews any edits before signature</p>
+
+        <h3>Step 3: Execution</h3>
+        <p>Prospect signs → we counter-sign → pilot begins</p>
+
+        <h3>Step 4: Launch Intelligence Briefings</h3>
+        <p>Set up daily briefing delivery → first briefing within 24 hours → collect feedback every 2 weeks</p>
+
+        <h2>Documents to Have Ready for Every Prospect</h2>
+        <div class="documents-list">
+            <p>All stored and ready to send immediately:</p>
+            <ul>
+                <li><strong>Privacy Policy</strong> — Data handling transparency</li>
+                <li><strong>Terms of Service</strong> — Service agreement</li>
+                <li><strong>WISP v2</strong> — Written Information Security Program</li>
+                <li><strong>Design Partner Agreement</strong> — Pilot arrangement</li>
+                <li><strong>FTC AI Disclosure Brief</strong> — We're transparent about AI use</li>
+                <li><strong>Sample Morning Briefing Mockup</strong> — Show what value looks like</li>
+                <li><strong>Vendor Due Diligence Responses</strong> — If they send a vendor form</li>
+            </ul>
+            <p style="margin-top: 15px;"><strong>All of these are drafted and ready to email. No delays.</strong></p>
+        </div>
+
+        <h2>Critical Reminders</h2>
+        
+        <h3>DO:</h3>
+        <div class="do-list">
+            <ul>
+                <li>Respond fast (within 24 hours)</li>
+                <li>Use the response templates (for consistency)</li>
+                <li>Send documents proactively (security, privacy, terms)</li>
+                <li>Ask about their pain points (so we learn)</li>
+                <li>Offer a pilot, not a commitment (lower friction)</li>
+                <li>Copy SOL on any legal questions</li>
+                <li>Escalate to DeVere if they want to close a deal</li>
+            </ul>
+        </div>
+
+        <h3>DON'T:</h3>
+        <div class="dont-list">
+            <ul>
+                <li>Overclaim what we do ("AI that reads everything")</li>
+                <li>Promise pricing or timeline we haven't committed to</li>
+                <li>Suggest we need access to their data</li>
+                <li>Use filler language or buzzwords</li>
+                <li>Delay response (24 hours is the SLA)</li>
+                <li>Make unilateral decisions about pilot commitment</li>
+            </ul>
+        </div>
+
+        <h2>Next Steps for Team</h2>
+        <p>This playbook is now LIVE. When the first prospect contact comes in:</p>
+        <ol style="margin-left: 20px; margin-top: 15px;">
+            <li><strong>Whoever sees the form/email first:</strong> Acknowledge receipt within 1 hour (if possible)</li>
+            <li><strong>Within 24 hours:</strong> Send appropriate response template + documents</li>
+            <li><strong>Every 24 hours after:</strong> Follow up if no response</li>
+            <li><strong>Always:</strong> Copy SOL on responses that involve legal/compliance questions</li>
+        </ol>
+
+        <footer>
+            <p>Questions or updates? Contact SOL (sol@covenantsystems.ai)</p>
+            <div class="version">
+                <p><strong>Version History:</strong></p>
+                <p>v1.0 — 2026-04-28 — Initial playbook created by SOL</p>
+            </div>
+        </footer>
+    </div>
+</body>
 </html>
