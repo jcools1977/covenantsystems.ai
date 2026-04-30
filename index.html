@@ -35,11 +35,34 @@
             border-bottom: 1px solid #e5e5e5;
         }
 
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .logo {
             font-size: 24px;
             font-weight: 700;
             color: #1a1a1a;
             text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav a:hover {
+            color: #0066cc;
         }
 
         .hero {
@@ -466,6 +489,20 @@
         }
 
         @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .nav {
+                gap: 15px;
+            }
+
+            .nav a {
+                font-size: 14px;
+            }
+
             .hero h1 {
                 font-size: 36px;
             }
@@ -500,7 +537,14 @@
 <body>
     <header>
         <div class="container">
-            <a href="/" class="logo">Covenant Systems</a>
+            <div class="header-content">
+                <a href="/" class="logo">Covenant Systems</a>
+                <nav class="nav">
+                    <a href="/">Home</a>
+                    <a href="/blog.html">Blog</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -665,6 +709,7 @@
             <p style="margin-top: 10px;">
                 <a href="/privacy.html">Privacy Policy</a> |
                 <a href="/terms.html">Terms of Service</a> |
+                <a href="/blog.html">Blog</a> |
                 <a href="mailto:hello@covenantsystems.ai">Contact</a>
             </p>
             <p style="margin-top: 10px;">
