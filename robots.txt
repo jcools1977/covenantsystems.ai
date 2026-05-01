@@ -1,0 +1,27 @@
+# Covenant Systems - Robots.txt
+# Updated 2026-05-01 by LUKE (CMO)
+#
+# Allowing public indexing of:
+# - Main landing page (index.html)
+# - Blog pages
+# - Legal pages (privacy.html, terms.html)
+#
+# Disallowing indexing of internal/experimental pages until strategic direction is finalized
+
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /blog.html
+Allow: /privacy.html
+Allow: /terms.html
+
+# Disallow internal operations and experimental pages
+Disallow: /ops-playbook.html
+Disallow: /prospect-playbook.html
+Disallow: /agreement-template.html
+Disallow: /book-assessment.html
+
+# Disallow alternative landing pages (law firm automation) until strategic clarity
+Disallow: /legal.html
+
+Sitemap: https://covenantsystems.ai/sitemap.xml
