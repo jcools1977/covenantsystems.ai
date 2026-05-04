@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 2026 Agentic AI Readiness Checklist for CPA Firms | Covenant Systems</title>
+    <meta name="description" content="Free assessment tool: Score your firm's AI maturity across 5 dimensions and identify your highest-leverage opportunities. For CPA firm owners and managing partners.">
+    <meta property="og:title" content="The 2026 Agentic AI Readiness Checklist for CPA Firms">
+    <meta property="og:description" content="Score your firm's AI maturity and identify bottlenecks costing you time and revenue. Free practical assessment.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .nav {
+            margin-top: 10px;
+        }
+
+        .nav a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-right: 20px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .post-header {
+            padding: 40px 0 20px;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        .post-meta {
+            margin-bottom: 15px;
+        }
+
+        .post-category {
+            display: inline-block;
+            background: #6c5ce7;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 10px;
+        }
+
+        .post-date {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .post-header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .post-excerpt {
+            font-size: 18px;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        .post-content {
+            padding: 40px 0;
+        }
+
+        .post-content h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 40px 0 15px;
+            color: #1a1a1a;
+        }
+
+        .post-content h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 25px 0 12px;
+            color: #1a1a1a;
+        }
+
+        .post-content p {
+            font-size: 16px;
+            margin-bottom: 18px;
+            color: #4a4a4a;
+        }
+
+        .post-content ul,
+        .post-content ol {
+            margin-left: 20px;
+            margin-bottom: 18px;
+        }
+
+        .post-content li {
+            margin-bottom: 10px;
+            color: #4a4a4a;
+            font-size: 16px;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #0066cc;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box h4 {
+            color: #0066cc;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+
+        .dimension-box {
+            background: #f8f9fa;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .dimension-box h3 {
+            color: #0066cc;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .dimension-box .score-label {
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-top: 20px;
+            display: block;
+        }
+
+        .interpretation {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .interpretation strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .download-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 12px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .download-box h3 {
+            color: white;
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .download-box p {
+            color: rgba(255,255,255,0.95);
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+        }
+
+        .download-button:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            transform: translateY(-2px);
+        }
+
+        .cta-box {
+            background: #0066cc;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .cta-box p {
+            color: rgba(255,255,255,0.95);
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #0066cc;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+
+        .post-footer {
+            padding: 40px 0;
+            border-top: 2px solid #e5e5e5;
+            margin-top: 40px;
+        }
+
+        .back-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #999;
+        }
+
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .post-header h1 {
+                font-size: 32px;
+            }
+
+            .post-content h2 {
+                font-size: 24px;
+            }
+
+            .download-box {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Covenant Systems</a>
+            <div class="nav">
+                <a href="/">Home</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <div class="post-header">
+            <div class="container">
+                <div class="post-meta">
+                    <span class="post-category">Free Resource</span>
+                    <span class="post-date">May 6, 2026</span>
+                </div>
+                <h1>The 2026 Agentic AI Readiness Checklist for CPA Firms</h1>
+                <p class="post-excerpt">A practical assessment tool for managing partners and firm owners. Score your firm's AI maturity across 5 dimensions and identify your highest-leverage opportunities.</p>
+            </div>
+        </div>
+
+        <div class="post-content">
+            <div class="container">
+                
+                <h2>Why This Matters Now</h2>
+                
+                <p>In 2026, "agentic AI" has moved from buzzword to business imperative.</p>
+
+                <p>According to Boomer Consulting's recent study, leading CPA firms report that <strong>53% of their workforce now has instant access to trusted intelligence</strong>, while firms still experimenting lag at just 21%.</p>
+
+                <p>That gap is not about technology adoption. It's about <em>intelligence infrastructure</em> — the systems that get the right information to the right person at the right time.</p>
+
+                <p>This isn't "Should we adopt AI?" The question now is: <strong>"Where are our intelligence gaps costing us time, revenue, and competitive position?"</strong></p>
+
+                <div class="highlight-box">
+                    <h4>What This Checklist Does</h4>
+                    <p>This is not a sales pitch disguised as a tool. This is a practical assessment you can use internally to:</p>
+                    <ul style="margin-top: 10px;">
+                        <li>Score your firm's current AI maturity across 5 critical dimensions</li>
+                        <li>Identify specific bottlenecks costing you 300-500+ hours per year</li>
+                        <li>Prioritize investments based on your firm's size and complexity</li>
+                        <li>Understand where "agentic AI" fits in your practice (and where it doesn't)</li>
+                    </ul>
+                </div>
+
+                <div class="download-box">
+                    <h3>📄 Download the Full Checklist</h3>
+                    <p>Get the complete 15-page assessment with scoring rubrics, interpretation guide, and implementation roadmaps for firms of every size.</p>
+                    <a href="https://docs.google.com/document/d/1U1_zG8hj5Cgg4Klfsvzmc0vrNFU2XixYf-TVEOCb99o" class="download-button" target="_blank">Download Free Checklist (Google Doc) →</a>
+                </div>
+
+                <h2>The 5 Dimensions of Intelligence Maturity</h2>
+
+                <p>Below is an overview of each dimension. The full checklist includes detailed scoring criteria, specific questions to assess your firm, and interpretation guidance.</p>
+
+                <div class="dimension-box">
+                    <h3>Dimension 1: Client Communication Intelligence</h3>
+                    <p><strong>The 340-Hour Problem:</strong> Most CPA firms lose 340+ hours every tax season to reactive client communication — answering the same questions, chasing missing documents, explaining deadlines.</p>
+                    
+                    <p><strong>What to assess:</strong></p>
+                    <ul>
+                        <li>Do we proactively communicate upcoming deadlines (or just send reminder emails)?</li>
+                        <li>Can we predict which clients are at risk of missing deadlines before it becomes urgent?</li>
+                        <li>Do we track year-over-year changes in client situations and surface relevant questions early?</li>
+                        <li>How often do clients surprise us with "I forgot to mention..." in March?</li>
+                    </ul>
+
+                    <div class="interpretation">
+                        <strong>If you score 1-2 here:</strong> Client communication is costing you 300+ hours per tax season. This is your highest-ROI starting point.
+                    </div>
+                </div>
+
+                <div class="dimension-box">
+                    <h3>Dimension 2: Regulatory & Tax Intelligence</h3>
+                    <p><strong>The Information Overload Problem:</strong> IRS notices, state tax law changes, industry guidance — it's coming from 15+ sources daily. You can't read it all, but you fear missing something critical.</p>
+                    
+                    <p><strong>What to assess:</strong></p>
+                    <ul>
+                        <li>Does our team know about tax law changes affecting clients within 48 hours of announcement?</li>
+                        <li>Do we have a system for filtering regulatory noise (not just forwarding everything)?</li>
+                        <li>How much partner time is spent on "keeping up" vs doing billable work?</li>
+                        <li>Can we quickly answer "Does this new rule affect our clients?" without hours of research?</li>
+                    </ul>
+
+                    <div class="interpretation">
+                        <strong>What agentic AI does here:</strong> Systems read every IRS notice, state bulletin, and industry publication daily — then filter for relevance to YOUR firm's client base.
+                    </div>
+                </div>
+
+                <div class="dimension-box">
+                    <h3>Dimension 3: Practice Management Intelligence</h3>
+                    <p><strong>The "Flying Blind" Problem:</strong> Most firms make pricing, hiring, and technology decisions based on anecdotes from conferences — not data about what's actually working in the market.</p>
+                    
+                    <p><strong>What to assess:</strong></p>
+                    <ul>
+                        <li>Do we know what other firms our size are charging for similar services?</li>
+                        <li>Are our hiring and compensation decisions informed by current market data?</li>
+                        <li>Do we track which service lines are growing/shrinking in our market?</li>
+                        <li>Do partners make strategic decisions based on data, or gut feel?</li>
+                    </ul>
+
+                    <div class="interpretation">
+                        <strong>If you score 1-2 here:</strong> You're making strategic decisions in the dark. Market intelligence is a critical gap.
+                    </div>
+                </div>
+
+                <div class="dimension-box">
+                    <h3>Dimension 4: Competitive & Market Intelligence</h3>
+                    <p><strong>The Competitive Blindspot Problem:</strong> You know your local competitors exist, but you don't know what they're doing differently, what they're charging, or how they're positioning themselves.</p>
+                    
+                    <p><strong>What to assess:</strong></p>
+                    <ul>
+                        <li>Do we monitor competitor websites, LinkedIn activity, and service offerings regularly?</li>
+                        <li>Do we know when competitors launch new services or change their positioning?</li>
+                        <li>Can we articulate what differentiates our firm from others in our market?</li>
+                        <li>Do we track industry M&A activity and consolidation trends?</li>
+                    </ul>
+
+                    <div class="interpretation">
+                        <strong>What agentic AI does here:</strong> Systems monitor competitor activity (new hires, service launches, pricing changes) and surface strategic implications.
+                    </div>
+                </div>
+
+                <div class="dimension-box">
+                    <h3>Dimension 5: Security & Governance Intelligence</h3>
+                    <p><strong>The Compliance Anxiety Problem:</strong> AI governance rules are changing every quarter. You need to stay compliant but don't have time to become an AI policy expert.</p>
+                    
+                    <p><strong>What to assess:</strong></p>
+                    <ul>
+                        <li>Do we understand which AI tools our staff are using (sanctioned and unsanctioned)?</li>
+                        <li>Do we have written policies for AI use in client work?</li>
+                        <li>Can we answer client questions about our AI usage and data protection?</li>
+                        <li>Are we confident we could pass an AI governance audit today?</li>
+                    </ul>
+
+                    <div class="interpretation">
+                        <strong>If you score 1-2 here:</strong> AI governance is a blindspot. This is a growing risk area — especially with insurance carriers and regulators.
+                    </div>
+                </div>
+
+                <h2>Your Total Score: What It Means</h2>
+
+                <p>The full checklist includes detailed scoring for each dimension (1-5 scale). Once you score yourself across all 5 dimensions, here's how to interpret your total:</p>
+
+                <div class="highlight-box">
+                    <h4>5-10 points: Intelligence Infrastructure Is Critical</h4>
+                    <p>Your firm is operating reactively across multiple dimensions. You're likely losing 500+ hours per year to avoidable inefficiencies.</p>
+                    <p><strong>Prioritize:</strong> Start with Dimension 1 (client communication) — it has the fastest ROI.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>11-15 points: Intelligence Gaps Are Costing You</h4>
+                    <p>You have some systems in place, but they're fragmented or manual. Partners are spending too much time on "keeping up."</p>
+                    <p><strong>Prioritize:</strong> Focus on your lowest-scoring dimension and automate it first.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>16-20 points: You're Above Average, But Not Optimized</h4>
+                    <p>You're doing better than most firms, but there are still manual intelligence processes consuming partner time.</p>
+                    <p><strong>Prioritize:</strong> Look for ways to consolidate intelligence into a daily briefing (instead of checking 10 sources).</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>21-25 points: You're an Intelligence Leader</h4>
+                    <p>Your firm has mature intelligence systems in place. You're in the top 10% of CPA firms on this dimension.</p>
+                    <p><strong>Prioritize:</strong> Share your approach with the industry — you have competitive advantage here.</p>
+                </div>
+
+                <h2>The Three Paths Forward</h2>
+
+                <p>Once you've scored yourself, the full checklist provides three implementation paths based on firm size and resources:</p>
+
+                <p><strong>PATH 1: Do It Yourself</strong> (Best for firms 50+ people with dedicated ops staff)<br>
+                Timeline: 6-12 months | Cost: $50K-$100K/year in staff time + tools</p>
+
+                <p><strong>PATH 2: Outsource Specific Functions</strong> (Best for firms 20-50 people)<br>
+                Timeline: 3-6 months | Cost: $30K-$75K/year depending on scope</p>
+
+                <p><strong>PATH 3: Intelligence-as-a-Service</strong> (Best for firms 5-20 people)<br>
+                Timeline: 2-4 weeks to onboard | Cost: Varies by provider</p>
+
+                <div class="download-box">
+                    <h3>📄 Get the Full Implementation Guide</h3>
+                    <p>The complete checklist includes detailed guidance for each path, vendor comparison criteria, and an agentic AI glossary for CPA firms.</p>
+                    <a href="https://docs.google.com/document/d/1U1_zG8hj5Cgg4Klfsvzmc0vrNFU2XixYf-TVEOCb99o" class="download-button" target="_blank">Download Now (Free) →</a>
+                </div>
+
+                <h2>What Covenant Systems Does</h2>
+
+                <p>We're an intelligence-as-a-service provider (Path 3) built specifically for CPA firms.</p>
+
+                <p>Here's what we deliver:</p>
+                <ul>
+                    <li><strong>Daily intelligence briefing</strong> sent to your inbox every morning</li>
+                    <li><strong>Regulatory & tax updates</strong> filtered for relevance to your client base</li>
+                    <li><strong>Competitive intelligence</strong> from your market</li>
+                    <li><strong>Practice management insights</strong> (pricing, staffing, technology trends)</li>
+                    <li><strong>Client risk alerts</strong> (upcoming deadlines, engagement pattern changes)</li>
+                    <li><strong>No software to install</strong>, no dashboards to learn, no client data required</li>
+                </ul>
+
+                <p>We're currently working with a small group of CPA firms (5-30 people) to refine our briefings.</p>
+
+                <div class="cta-box">
+                    <h3>Want to Talk Through Your Results?</h3>
+                    <p>If you've completed the checklist and want to discuss your firm's specific intelligence gaps, we're happy to walk through your results with you. No sales pitch — just a conversation about what would actually help.</p>
+                    <a href="/#contact" class="cta-button">Schedule a conversation →</a>
+                </div>
+
+                <h2>Legal Disclaimer & Sharing</h2>
+
+                <p><strong>You may share or adapt this checklist with attribution.</strong> We built this to be useful, not to be proprietary.</p>
+
+                <p>This checklist is provided for informational purposes only and does not constitute professional advice. Every CPA firm has unique needs, constraints, and regulatory obligations.</p>
+
+                <p><strong>AI Disclosure:</strong> This document was created with AI assistance (Claude 3.7 Sonnet) and reviewed by human founders for accuracy and relevance to CPA firm operations.</p>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="container">
+                <p><a href="/blog.html" class="back-link">← Back to Blog</a></p>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Covenant Systems LLC. A North Carolina limited liability company.</p>
+            <p style="margin-top: 10px;">
+                <a href="/privacy.html">Privacy Policy</a> |
+                <a href="/terms.html">Terms of Service</a> |
+                <a href="/blog.html">Blog</a> |
+                <a href="mailto:hello@covenantsystems.ai">Contact</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
