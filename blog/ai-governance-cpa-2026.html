@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Governance for CPA Firms in 2026 | Covenant Systems</title>
+    <meta name="description" content="A practical checklist for CPA firm owners: what auditors, regulators, and insurers now expect from your AI governance program.">
+    <meta property="og:title" content="AI Governance for CPA Firms in 2026 | Covenant Systems">
+    <meta property="og:description" content="What auditors, regulators, and insurers expect from your AI governance. A practical checklist for CPA firms.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
+
+        .nav {
+            margin-top: 10px;
+        }
+
+        .nav a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            margin-right: 20px;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .post-header {
+            padding: 40px 0 20px;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        .post-meta {
+            margin-bottom: 15px;
+        }
+
+        .post-category {
+            display: inline-block;
+            background: #00b894;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 10px;
+        }
+
+        .post-date {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .post-header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .post-excerpt {
+            font-size: 18px;
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        .post-content {
+            padding: 40px 0;
+        }
+
+        .post-content h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 40px 0 15px;
+            color: #1a1a1a;
+        }
+
+        .post-content h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 25px 0 12px;
+            color: #1a1a1a;
+        }
+
+        .post-content p {
+            font-size: 16px;
+            margin-bottom: 18px;
+            color: #4a4a4a;
+        }
+
+        .post-content ul,
+        .post-content ol {
+            margin-left: 20px;
+            margin-bottom: 18px;
+        }
+
+        .post-content li {
+            margin-bottom: 10px;
+            color: #4a4a4a;
+            font-size: 16px;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #0066cc;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box h4 {
+            color: #0066cc;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .highlight-box p {
+            margin-bottom: 8px;
+        }
+
+        .checklist {
+            background: #f8f9fa;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .checklist h4 {
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .checklist-checkbox {
+            min-width: 20px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #0066cc;
+            border-radius: 4px;
+            margin-right: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .checklist-text {
+            font-size: 15px;
+            color: #4a4a4a;
+            line-height: 1.5;
+        }
+
+        .author-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+
+        .author-note p {
+            margin-bottom: 8px;
+        }
+
+        .cta-box {
+            background: #0066cc;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .cta-box p {
+            color: rgba(255,255,255,0.95);
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #0066cc;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+
+        .post-footer {
+            padding: 40px 0;
+            border-top: 2px solid #e5e5e5;
+            margin-top: 40px;
+        }
+
+        .back-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #999;
+        }
+
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .post-header h1 {
+                font-size: 32px;
+            }
+
+            .post-content h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Covenant Systems</a>
+            <div class="nav">
+                <a href="/">Home</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <div class="post-header">
+            <div class="container">
+                <div class="post-meta">
+                    <span class="post-category">Industry Truth</span>
+                    <span class="post-date">May 3, 2026</span>
+                </div>
+                <h1>AI Governance for CPA Firms in 2026: What Auditors, Regulators, and Insurers Now Expect</h1>
+                <p class="post-excerpt">You're adopting AI. But are you prepared for the governance audit? Here's a practical checklist of what's now required — and what most firms are missing.</p>
+            </div>
+        </div>
+
+        <div class="post-content">
+            <div class="container">
+                
+                <h2>The Governance Gap</h2>
+                <p>In 2024 and early 2025, adopting AI was optional. In 2026, <em>not</em> having an AI governance program is now a liability.</p>
+                
+                <p>Your external auditors will ask for it. Your liability insurance company will want to see it. Your state accountancy board is beginning to expect it. And your clients — especially those in regulated industries — will ask: "Do you have a documented AI governance framework?"</p>
+
+                <p>Yet when we surveyed 30+ CPA firm owners this spring, fewer than 10% had a written governance program for the AI tools they're already using.</p>
+
+                <div class="highlight-box">
+                    <h4>The Risk</h4>
+                    <p>An AI tool makes an error in your firm's analysis. It's relayed to a client. The client relies on it and makes a business decision. When something goes wrong, the first question will be: "Did your firm have controls over how that AI tool worked?"</p>
+                    <p>If the answer is "we just use it," that's a liability exposure. If the answer is "we have a documented, auditable governance framework," you're protected.</p>
+                </div>
+
+                <h2>What's Now Required: The 7-Point AI Governance Framework</h2>
+
+                <p>Based on guidance from AICPA, ISACA, EY, and your insurance carriers, here's what a basic AI governance program for CPA firms must include:</p>
+
+                <div class="checklist">
+                    <h4>Your AI Governance Checklist</h4>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox"></div>
+                        <div class="checklist-text"><strong>1. Written AI Policy</strong> — A documented policy that covers how your firm evaluates, adopts, and oversees AI tools. This doesn't need to be 50 pages. One page that says "We use AI in X areas, with Y oversight" is a start.</div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox"></div>
+                        <div class="checklist-text"><strong>2. Tool Inventory & Risk Assessment</strong> — A list of every AI tool your firm uses (ChatGPT, Claude, specialized tax software with AI, etc.). For each, a simple risk assessment: "What's the worst thing that could go wrong if this tool fails?"</div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox"></div>
+                        <div class="checklist-text"><strong>3. Data Handling & Privacy Controls</strong> — Clear rules about what firm data (and what client data) can go into each AI tool. If you're using public AI models, what's your data retention policy?</div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox"></div>
+                        <div class="checklist-text"><strong>4. Human Review & Oversight</strong> — For every high-risk AI output (tax analysis, audit conclusions, client advice), who reviews it before it's used? This is your control: "AI creates the draft, a human always verifies before delivery."</div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox"></div>
+                        <div class="checklist-text"><strong>5. Audit Trail & Recordkeeping</strong> — Your ability to prove what the AI did, when, and what a human reviewed. If you're audited, you need to show "Here's the AI analysis our team reviewed, and here's the decision we made."</div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox"></div>
+                        <div class="checklist-text"><strong>6. Transparency & Client Disclosure</strong> — When you use AI in client work, do clients know? Have you disclosed it? (Required by law in some states, and by professional ethics in all states.)</div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox"></div>
+                        <div class="checklist-text"><strong>7. Quarterly Review & Updates</strong> — Your governance framework isn't static. As new tools emerge and regulations change, you review and update your policy. Document the review.</div>
+                    </div>
+                </div>
+
+                <h2>What's Missing from Most Firms</h2>
+
+                <p>When auditors and regulators review CPA firm AI governance in 2026, here's what they're finding:</p>
+
+                <h3>❌ No Written Policy</h3>
+                <p>Most firms have an <em>unspoken</em> policy: "Partners can use AI tools as long as they're smart about it." That's not a policy. That's hope.</p>
+
+                <h3>❌ No Risk Assessment</h3>
+                <p>Firms use high-risk AI (client advisory work, audit analysis) with the same framework they use for low-risk AI (email drafting). One needs heavy oversight. The other doesn't.</p>
+
+                <h3>❌ No Audit Trail</h3>
+                <p>If you use ChatGPT for client work and don't save the prompts, the outputs, and the human review, you have no proof of what happened. Auditors want proof.</p>
+
+                <h3>❌ No Client Disclosure</h3>
+                <p>Many firms use AI without telling clients. The ethics rules are evolving, but the trend is clear: clients need to know.</p>
+
+                <h2>Building Your Framework: Where to Start</h2>
+
+                <p><strong>You don't need to build this from scratch.</strong></p>
+
+                <p>AICPA has published templates. ISACA has checklists. Your liability insurer likely has guidance. But the frameworks are scattered across a dozen sources, and they're written for large firms with 200-person teams.</p>
+
+                <p>What you actually need: a one-page written policy, a simple inventory of your AI tools, a clear rule about human review, and a way to document that review happened.</p>
+
+                <p>That's 80% of compliance. The other 20% is updating it quarterly and having documentation ready for your auditors.</p>
+
+                <h2>The Honest Truth</h2>
+
+                <p>If you're waiting for perfect guidance from your state board or national standards body, you'll be waiting forever. Regulation moves slowly. Your firm can't.</p>
+
+                <p>The firms winning in 2026 are the ones who:</p>
+                
+                <ol>
+                    <li>Acknowledge they're using AI</li>
+                    <li>Document why and how</li>
+                    <li>Put a human in the loop for high-risk decisions</li>
+                    <li>Keep records showing they did that</li>
+                    <li>Update their practices as they learn more</li>
+                </ol>
+
+                <p>That's not just compliant. That's professional.</p>
+
+                <div class="author-note">
+                    <p><strong>A note from us:</strong> We built Covenant Systems around this exact principle. When you use our daily intelligence briefing, you're not getting a black-box AI recommendation. You're getting a sourced, auditable intelligence briefing with clear attribution. You review it. You decide. We keep the record. That's governance done right.</p>
+                </div>
+
+                <div class="cta-box">
+                    <h3>Need help building your framework?</h3>
+                    <p>We work with CPA firms to create practical AI governance programs that satisfy auditors, regulators, and your insurance company. No templates. No overkill. Just what your firm actually needs.</p>
+                    <a href="/#contact" class="cta-button">Start a conversation →</a>
+                </div>
+
+                <h2>What's Next</h2>
+
+                <p>This checklist is just the start. In future posts, we'll cover:</p>
+                <ul>
+                    <li>How to create your AI tool inventory in under 2 hours</li>
+                    <li>Sample client disclosure language (and when you legally must use it)</li>
+                    <li>What auditors will ask about your AI governance (and how to answer)</li>
+                    <li>Building a quarterly review process that actually works</li>
+                </ul>
+
+                <p>Subscribe to stay updated.</p>
+
+            </div>
+        </div>
+
+        <div class="post-footer">
+            <div class="container">
+                <p><a href="/blog.html" class="back-link">← Back to Blog</a></p>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Covenant Systems LLC. A North Carolina limited liability company.</p>
+            <p style="margin-top: 10px;">
+                <a href="/privacy.html">Privacy Policy</a> |
+                <a href="/terms.html">Terms of Service</a> |
+                <a href="/blog.html">Blog</a> |
+                <a href="mailto:hello@covenantsystems.ai">Contact</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
