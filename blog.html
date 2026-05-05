@@ -165,6 +165,75 @@
             text-decoration: underline;
         }
 
+        .newsletter-signup {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .newsletter-signup h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .newsletter-signup p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 14px 32px;
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #0a0a0a;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+            }
+        }
+
         .coming-soon {
             background: #f8f9fa;
             border-radius: 8px;
@@ -217,6 +286,18 @@
 
             .post-card h2 {
                 font-size: 24px;
+            }
+
+            .newsletter-signup {
+                padding: 30px 20px;
+            }
+
+            .newsletter-signup h3 {
+                font-size: 24px;
+            }
+
+            .newsletter-signup p {
+                font-size: 16px;
             }
         }
     </style>
@@ -298,10 +379,22 @@
                 <a href="/blog/why-we-built-covenant-systems.html" class="read-more">Read the full story →</a>
             </article>
 
+            <!-- NEWSLETTER SIGNUP SECTION -->
+            <div class="newsletter-signup">
+                <h3>Stay Updated</h3>
+                <p>Get insights for CPA firms delivered to your inbox every week — AI governance, vendor selection, and our founders' journey.</p>
+                <form id="newsletterForm" action="https://formspree.io/f/xdkoedwe" method="POST" class="newsletter-form">
+                    <input type="email" name="email" placeholder="Your email address" required>
+                    <input type="hidden" name="_subject" value="New Blog Subscriber">
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div id="newsletterStatus"></div>
+            </div>
+
             <!-- Coming Soon Section -->
             <div class="coming-soon">
                 <h3>More Stories Coming Soon</h3>
-                <p>We're publishing practical guides for CPA firm owners on AI governance, vendor selection, and professional practice. Subscribe to stay updated.</p>
+                <p>We're publishing video series about our journey, interviews with CPA design partners, and deep dives into AI governance. More content coming weekly.</p>
             </div>
 
         </div>
@@ -318,5 +411,53 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        // Handle newsletter form submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterStatus = document.getElementById('newsletterStatus');
+        
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = newsletterForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Subscribing...';
+            
+            fetch(newsletterForm.action, {
+                method: 'POST',
+                body: new FormData(newsletterForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    newsletterStatus.style.marginTop = '15px';
+                    newsletterStatus.style.padding = '12px';
+                    newsletterStatus.style.backgroundColor = 'rgba(255,255,255,0.2)';
+                    newsletterStatus.style.borderRadius = '6px';
+                    newsletterStatus.style.fontSize = '16px';
+                    newsletterStatus.textContent = '✓ Thanks for subscribing! Check your email for confirmation.';
+                    newsletterForm.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                newsletterStatus.style.marginTop = '15px';
+                newsletterStatus.style.padding = '12px';
+                newsletterStatus.style.backgroundColor = 'rgba(255,255,255,0.2)';
+                newsletterStatus.style.borderRadius = '6px';
+                newsletterStatus.style.fontSize = '16px';
+                newsletterStatus.textContent = 'Something went wrong. Email hello@covenantsystems.ai to subscribe.';
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            });
+        });
+    </script>
 </body>
 </html>
