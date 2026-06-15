@@ -11,9 +11,11 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
-// Match the port the previous nginx container used (80), so Railway's existing
-// routing reaches us. Railway's PORT variable, if set, still takes precedence.
-const PORT = process.env.PORT || 80;
+// The previous nginx container listened on port 80, which is what Railway's
+// proxy for this service routes to. Node honors Railway's injected PORT (a
+// different value), so we bind BOTH 80 and PORT and answer on whichever one
+// Railway actually forwards to.
+const PORTS = Array.from(new Set([80, Number(process.env.PORT)].filter(Boolean)));
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const CONTACT_TO = process.env.CONTACT_TO || "j@covenantsystems.ai";
 const CONTACT_FROM =
@@ -150,7 +152,7 @@ function handleContact(req, res) {
   });
 }
 
-const server = http.createServer((req, res) => {
+function requestHandler(req, res) {
   const url = req.url.split("?")[0];
 
   if (req.method === "POST" && url === "/api/contact") {
@@ -178,11 +180,15 @@ const server = http.createServer((req, res) => {
 
   res.writeHead(405, { "Content-Type": "text/plain; charset=utf-8" });
   res.end("Method not allowed");
-});
+}
 
 process.on("uncaughtException", (err) => console.error("uncaughtException", err));
 process.on("unhandledRejection", (err) => console.error("unhandledRejection", err));
 
-server.listen(PORT, "0.0.0.0", () =>
-  console.log(`Covenant Systems site listening on 0.0.0.0:${PORT}`)
-);
+PORTS.forEach((p) => {
+  const s = http.createServer(requestHandler);
+  s.on("error", (err) => console.error(`listen error on port ${p}: ${err.message}`));
+  s.listen(p, "0.0.0.0", () =>
+    console.log(`Covenant Systems site listening on 0.0.0.0:${p}`)
+  );
+});
