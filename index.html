@@ -279,6 +279,19 @@
     transition:color .25s,letter-spacing .25s;
   }
   .mail-big:hover,.mail-big:focus-visible{color:var(--brass-bright);letter-spacing:0.04em;}
+  .copy-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:20px;}
+  .copy-mail{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--bone-dim);background:transparent;
+    border:1px solid var(--rule-strong);
+    padding:10px 16px;cursor:pointer;
+    transition:color .25s,border-color .25s,background .25s;
+  }
+  .copy-mail:hover,.copy-mail:focus-visible{color:var(--brass-bright);border-color:var(--brass);background:rgba(188,148,86,0.06);}
+  .copy-mail.copied{color:var(--brass-bright);border-color:var(--brass);}
+  .copy-mail .ico{width:13px;height:13px;flex:none;}
 
   /* ---- footer ---- */
   footer.site{
@@ -429,7 +442,13 @@
     <section class="node contact">
       <p class="label">Start Here</p>
       <h2 class="reveal">Have a problem worth<span class="b"> solving well?</span></h2>
-      <a class="mail-big reveal" href="mailto:j@covenantsystems.ai?subject=Conversation%20about%20fractional%20CTO%20work">j@covenantsystems.ai</a>
+      <div class="copy-row reveal">
+        <a class="mail-big" href="mailto:j@covenantsystems.ai?subject=Conversation%20about%20fractional%20CTO%20work">j@covenantsystems.ai</a>
+        <button class="copy-mail" type="button" data-mail="j@covenantsystems.ai" aria-label="Copy email address to clipboard">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span class="lbl">Copy address</span>
+        </button>
+      </div>
     </section>
 
   </div>
@@ -465,6 +484,34 @@
     } else {
       document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
     }
+
+    // copy-to-clipboard for the email, so visitors without a default mail app still get the address
+    document.querySelectorAll('.copy-mail').forEach(function(btn){
+      var lbl = btn.querySelector('.lbl');
+      var original = lbl ? lbl.textContent : '';
+      var timer;
+      btn.addEventListener('click', function(){
+        var mail = btn.getAttribute('data-mail');
+        var done = function(ok){
+          if(lbl){ lbl.textContent = ok ? 'Copied' : mail; }
+          btn.classList.add('copied');
+          clearTimeout(timer);
+          timer = setTimeout(function(){
+            if(lbl){ lbl.textContent = original; }
+            btn.classList.remove('copied');
+          }, 2200);
+        };
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(mail).then(function(){ done(true); }, function(){ done(false); });
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = mail; ta.style.position='fixed'; ta.style.opacity='0';
+          document.body.appendChild(ta); ta.select();
+          try { document.execCommand('copy'); done(true); } catch(e){ done(false); }
+          document.body.removeChild(ta);
+        }
+      });
+    });
   })();
 </script>
 
