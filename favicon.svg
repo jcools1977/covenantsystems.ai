@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Covenant Systems AI">
+  <rect width="32" height="32" rx="6" fill="#0F1518"/>
+  <line x1="16" y1="4.5" x2="16" y2="18" stroke="#BC9456" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="16" cy="6" r="1.7" fill="#BC9456"/>
+  <path d="M16 18 L20.5 24 L16 29.5 L11.5 24 Z" fill="#D8B477"/>
+</svg>

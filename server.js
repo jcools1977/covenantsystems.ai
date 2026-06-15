@@ -30,6 +30,10 @@ const PUBLIC = {
   "/terms.html": { file: "terms.html", type: "text/html; charset=utf-8", cache: 300 },
   "/robots.txt": { file: "robots.txt", type: "text/plain; charset=utf-8", cache: 300 },
   "/j-devere-cooley.jpg": { file: "j-devere-cooley.jpg", type: "image/jpeg", cache: 86400 },
+  "/favicon.svg": { file: "favicon.svg", type: "image/svg+xml", cache: 86400 },
+  "/favicon.png": { file: "favicon.png", type: "image/png", cache: 86400 },
+  "/favicon.ico": { file: "favicon.png", type: "image/png", cache: 86400 },
+  "/apple-touch-icon.png": { file: "apple-touch-icon.png", type: "image/png", cache: 86400 },
 };
 
 // Light in-memory rate limit: at most 5 submissions per IP per 10 minutes.
