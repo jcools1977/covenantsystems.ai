@@ -1,841 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Covenant Systems | Daily Intelligence for CPA Firms</title>
-    <meta name="description" content="Daily intelligence briefings that help CPA firm owners make better decisions. No new software. No complexity. Just insights delivered to your inbox every morning.">
-    <meta property="og:title" content="Covenant Systems | Daily Intelligence for CPA Firms">
-    <meta property="og:description" content="Daily intelligence briefings that help CPA firm owners make better decisions. No new software. No complexity. Just insights.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://covenantsystems.ai">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQKF4Y5L8N"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-HQKF4Y5L8N');
-    </script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            padding: 20px 0;
-            border-bottom: 1px solid #e5e5e5;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a1a1a;
-            text-decoration: none;
-        }
-
-        .nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav a {
-            color: #1a1a1a;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        .nav a:hover {
-            color: #0066cc;
-        }
-
-        .hero {
-            padding: 80px 0 60px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-
-        .hero .subheading {
-            font-size: 22px;
-            color: #4a4a4a;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #0066cc;
-            color: #ffffff;
-            padding: 18px 48px;
-            font-size: 20px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 4px 14px rgba(0, 102, 204, 0.4);
-        }
-
-        .cta-button:hover {
-            background: #0052a3;
-            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.5);
-            transform: translateY(-2px);
-        }
-
-        .cta-button:active {
-            transform: translateY(0);
-        }
-
-        .secondary-button {
-            display: inline-block;
-            background: transparent;
-            color: #0066cc;
-            padding: 14px 32px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 8px;
-            border: 2px solid #0066cc;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            margin-left: 15px;
-        }
-
-        .secondary-button:hover {
-            background: #0066cc;
-            color: #ffffff;
-        }
-
-        .founders-early {
-            background: #f8f9fa;
-            padding: 60px 0;
-        }
-
-        .founders-early h2 {
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        .founders-early-intro {
-            text-align: center;
-            font-size: 18px;
-            color: #4a4a4a;
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-
-        .video-section-early {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .video-embed {
-            width: 100%;
-            height: 500px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border: 1px solid #e5e5e5;
-        }
-
-        .problem {
-            background: #ffffff;
-            padding: 60px 0;
-        }
-
-        .problem h2 {
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .problem-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .problem-card h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #1a1a1a;
-        }
-
-        .problem-card p {
-            color: #4a4a4a;
-            font-size: 16px;
-        }
-
-        .solution {
-            padding: 60px 0;
-            background: #f8f9fa;
-        }
-
-        .solution h2 {
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .solution .intro {
-            text-align: center;
-            font-size: 18px;
-            color: #4a4a4a;
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
-
-        .feature-list {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .feature {
-            margin-bottom: 30px;
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .feature:before {
-            content: "\2713";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #0066cc;
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        .feature h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .feature p {
-            color: #4a4a4a;
-            font-size: 16px;
-        }
-
-        .how-it-works {
-            background: #ffffff;
-            padding: 60px 0;
-        }
-
-        .how-it-works h2 {
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .step {
-            text-align: center;
-        }
-
-        .step-number {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: #0066cc;
-            color: white;
-            border-radius: 50%;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 50px;
-            margin-bottom: 20px;
-        }
-
-        .step h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .step p {
-            color: #4a4a4a;
-            font-size: 16px;
-        }
-
-        .trust {
-            padding: 60px 0;
-            text-align: center;
-            background: #f8f9fa;
-        }
-
-        .trust h2 {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .trust-item {
-            padding: 20px;
-        }
-
-        .trust-item h4 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #1a1a1a;
-        }
-
-        .trust-item p {
-            font-size: 14px;
-            color: #4a4a4a;
-        }
-
-        .cta-section {
-            background: #0066cc;
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            font-size: 18px;
-            margin-bottom: 40px;
-            opacity: 0.95;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-form h3 {
-            color: #1a1a1a;
-            font-size: 24px;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .contact-form p {
-            color: #4a4a4a;
-            margin-bottom: 25px;
-            font-size: 16px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #1a1a1a;
-            font-size: 14px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #0066cc;
-            box-shadow: 0 0 0 3px rgba(0,102,204,0.1);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .submit-button {
-            width: 100%;
-            background: #0066cc;
-            color: white;
-            padding: 18px;
-            font-size: 18px;
-            font-weight: 700;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 14px rgba(0, 102, 204, 0.3);
-        }
-
-        .submit-button:hover {
-            background: #0052a3;
-            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .submit-button:active {
-            transform: translateY(0);
-        }
-
-        .submit-button:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-
-        .form-status {
-            margin-top: 15px;
-            padding: 12px;
-            border-radius: 6px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .form-status.success {
-            background: #d4edda;
-            color: #155724;
-        }
-
-        .form-status.error {
-            background: #f8d7da;
-            color: #721c24;
-        }
-
-        .alt-contact {
-            margin-top: 30px;
-            padding-top: 25px;
-            border-top: 1px solid #e5e5e5;
-            text-align: center;
-        }
-
-        .alt-contact p {
-            color: #4a4a4a;
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-
-        .email-direct {
-            display: inline-block;
-            font-size: 16px;
-            font-weight: 600;
-            color: #0066cc;
-            text-decoration: none;
-            padding: 8px 16px;
-            border: 2px solid #0066cc;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .email-direct:hover {
-            background: #0066cc;
-            color: white;
-        }
-
-        footer {
-            background: #1a1a1a;
-            color: #ffffff;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 14px;
-            color: #999;
-        }
-
-        footer a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .video-cta {
-            display: inline-block;
-            background: #0066cc;
-            color: white;
-            padding: 16px 40px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 14px rgba(0, 102, 204, 0.3);
-        }
-
-        .video-cta:hover {
-            background: #0052a3;
-            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-            }
-
-            .nav {
-                gap: 15px;
-            }
-
-            .nav a {
-                font-size: 14px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero .subheading {
-                font-size: 18px;
-            }
-
-            .problem h2, .solution h2, .how-it-works h2, .trust h2, .founders-early h2 {
-                font-size: 28px;
-            }
-
-            .cta-button {
-                padding: 16px 32px;
-                font-size: 18px;
-            }
-
-            .secondary-button {
-                margin-left: 0;
-                margin-top: 15px;
-                display: block;
-            }
-
-            .contact-form {
-                padding: 30px 20px;
-            }
-
-            .cta-section h2 {
-                font-size: 28px;
-            }
-
-            .video-embed {
-                height: 300px;
-            }
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Covenant Systems AI: Fractional CTO & AI Solution Architecture</title>
+<meta name="description" content="Covenant Systems AI is the fractional CTO practice of J. DeVere Cooley. AI solution architecture for multi-location operators. Breath before code." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1518;
+    --ink-raised:#161F23;
+    --bone:#E9E3D5;
+    --bone-dim:#A7A89E;
+    --brass:#BC9456;
+    --brass-bright:#D8B477;
+    --rule:rgba(233,227,213,0.13);
+    --rule-strong:rgba(233,227,213,0.22);
+    --maxw:1080px;
+    --gut:clamp(20px,5vw,64px);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--bone);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+
+  /* ambient depth behind hero */
+  body::before{
+    content:"";
+    position:fixed;
+    top:-30vh; left:50%;
+    width:120vw; height:90vh;
+    transform:translateX(-50%);
+    background:radial-gradient(60% 60% at 30% 30%, rgba(188,148,86,0.10), transparent 70%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  .wrap{
+    position:relative;
+    z-index:1;
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 var(--gut);
+  }
+
+  /* ---- plumb line ---- */
+  .plumb{
+    position:relative;
+    border-left:1px solid var(--rule);
+    padding-left:clamp(20px,4vw,52px);
+  }
+  .node{position:relative;}
+  .node::before{
+    content:"";
+    position:absolute;
+    left:calc(-1 * clamp(20px,4vw,52px) - 1px);
+    top:0.55em;
+    width:7px;height:7px;
+    margin-left:-3px;
+    background:var(--brass);
+    border-radius:50%;
+    box-shadow:0 0 0 4px var(--ink);
+  }
+
+  /* ---- header ---- */
+  header.site{
+    position:relative;z-index:2;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;
+    padding:26px var(--gut);
+    max-width:var(--maxw);margin:0 auto;
+  }
+  .mark{
+    font-family:"IBM Plex Mono",monospace;
+    font-weight:500;
+    letter-spacing:0.18em;
+    font-size:13px;
+    text-transform:uppercase;
+    color:var(--bone);
+  }
+  .mark b{color:var(--brass);font-weight:500;}
+  .head-mail{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12.5px;letter-spacing:0.04em;
+    color:var(--bone-dim);
+    border-bottom:1px solid transparent;
+    transition:color .25s, border-color .25s;
+    padding-bottom:2px;
+  }
+  .head-mail:hover,.head-mail:focus-visible{color:var(--brass-bright);border-color:var(--brass);}
+
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin:0 0 22px;
+  }
+
+  /* ---- hero ---- */
+  .hero{padding:clamp(56px,12vh,140px) 0 clamp(60px,11vh,120px);}
+  .hero h1{
+    font-family:"Marcellus",serif;
+    font-weight:400;
+    font-size:clamp(2.7rem,7.2vw,5.4rem);
+    line-height:1.04;
+    letter-spacing:0.005em;
+    margin:0 0 30px;
+    color:var(--bone);
+  }
+  .hero h1 .b{display:block;color:var(--brass-bright);}
+  .lede{
+    font-size:clamp(1.05rem,1.7vw,1.28rem);
+    line-height:1.66;
+    max-width:43ch;
+    color:var(--bone-dim);
+    margin:0 0 38px;
+  }
+  .lede strong{color:var(--bone);font-weight:500;}
+
+  .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;}
+  .cta{
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:13.5px;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--ink);background:var(--brass);
+    padding:15px 26px;
+    border:1px solid var(--brass);
+    transition:background .25s,transform .25s;
+  }
+  .cta:hover,.cta:focus-visible{background:var(--brass-bright);transform:translateY(-2px);}
+  .cta .arr{transition:transform .25s;}
+  .cta:hover .arr{transform:translateX(4px);}
+  .creed{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--bone-dim);
+  }
+  .creed span{color:var(--brass);}
+
+  /* ---- hero portrait ---- */
+  .hero-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) clamp(216px,24vw,300px);
+    gap:clamp(32px,6vw,80px);
+    align-items:center;
+  }
+  .portrait{margin:0;position:relative;}
+  .portrait .mat{
+    position:relative;
+    padding:10px;
+    background:var(--ink-raised);
+    border:1px solid var(--rule-strong);
+  }
+  .portrait .mat::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    transform:translate(11px,11px);
+    border:1px solid rgba(188,148,86,0.38);
+    pointer-events:none;
+    z-index:-1;
+  }
+  .portrait img{
+    display:block;width:100%;height:auto;
+    border:1px solid var(--brass);
+    filter:saturate(0.88);
+  }
+  .portrait figcaption{
+    margin-top:14px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--bone-dim);
+  }
+  .portrait figcaption span{color:var(--brass);}
+  @media (max-width:760px){
+    .hero-grid{grid-template-columns:1fr;}
+    .portrait{max-width:280px;}
+  }
+
+  /* ---- generic section ---- */
+  section{padding:clamp(56px,9vh,104px) 0;position:relative;z-index:1;}
+  .label{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--brass);
+    margin:0 0 8px;
+  }
+  .sec-head{
+    font-family:"Marcellus",serif;font-weight:400;
+    font-size:clamp(1.7rem,3.6vw,2.5rem);
+    line-height:1.12;color:var(--bone);
+    margin:0 0 48px;max-width:20ch;
+  }
+
+  /* ---- practice list ---- */
+  .practice{display:grid;gap:0;}
+  .row{
+    display:grid;
+    grid-template-columns:minmax(0,7.5rem) 1fr;
+    gap:clamp(14px,4vw,56px);
+    padding:26px 0;
+    border-top:1px solid var(--rule);
+    align-items:baseline;
+  }
+  .row:last-child{border-bottom:1px solid var(--rule);}
+  .row h3{
+    font-family:"IBM Plex Sans",sans-serif;font-weight:600;
+    font-size:1.06rem;letter-spacing:0.01em;margin:0;color:var(--bone);
+  }
+  .row p{margin:0;color:var(--bone-dim);max-width:48ch;font-size:1rem;}
+  .row .idx{
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+    letter-spacing:0.16em;color:var(--brass);grid-column:1/-1;display:none;
+  }
+
+  /* ---- proof ---- */
+  .proof-wrap{
+    background:var(--ink-raised);
+    border:1px solid var(--rule);
+    padding:clamp(28px,4vw,52px);
+  }
+  .proof-meta{
+    font-family:"IBM Plex Mono",monospace;font-size:12px;
+    letter-spacing:0.16em;text-transform:uppercase;color:var(--brass);
+    display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:26px;
+  }
+  .proof-wrap p.body{font-size:1.08rem;line-height:1.7;color:var(--bone);max-width:62ch;margin:0 0 14px;}
+  .proof-wrap p.body.dim{color:var(--bone-dim);font-size:1rem;margin-bottom:0;}
+  .stats{display:flex;flex-wrap:wrap;gap:14px 40px;margin:34px 0 6px;padding-top:30px;border-top:1px solid var(--rule);}
+  .stat .n{font-family:"Marcellus",serif;font-size:clamp(1.8rem,4vw,2.6rem);color:var(--brass-bright);line-height:1;}
+  .stat .l{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--bone-dim);margin-top:8px;}
+  .quote-slot{
+    margin-top:34px;padding:22px 26px;
+    border-left:2px solid var(--brass);
+    background:rgba(188,148,86,0.06);
+    color:var(--bone-dim);font-style:italic;font-size:0.98rem;
+  }
+  .quote-slot .attr{display:block;margin-top:10px;font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:0.08em;color:var(--brass);}
+
+  /* ---- principles ---- */
+  .princ{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);}
+  .princ .cell{background:var(--ink);padding:clamp(24px,3vw,36px);}
+  .princ .k{
+    font-family:"Marcellus",serif;font-size:1.2rem;color:var(--brass-bright);margin:0 0 12px;
+  }
+  .princ .cell p{margin:0;color:var(--bone-dim);font-size:0.98rem;line-height:1.62;}
+
+  /* ---- contact ---- */
+  .contact{text-align:left;}
+  .contact h2{
+    font-family:"Marcellus",serif;font-weight:400;
+    font-size:clamp(2rem,5.4vw,3.6rem);line-height:1.05;margin:0 0 28px;color:var(--bone);
+  }
+  .contact h2 .b{color:var(--brass-bright);}
+  .mail-big{
+    display:inline-block;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:clamp(1rem,2.4vw,1.4rem);letter-spacing:0.02em;
+    color:var(--bone);
+    border-bottom:1px solid var(--brass);
+    padding-bottom:6px;
+    transition:color .25s,letter-spacing .25s;
+  }
+  .mail-big:hover,.mail-big:focus-visible{color:var(--brass-bright);letter-spacing:0.04em;}
+
+  /* ---- footer ---- */
+  footer.site{
+    border-top:1px solid var(--rule);
+    margin-top:clamp(48px,8vh,90px);
+    padding:30px var(--gut);
+    max-width:var(--maxw);margin-left:auto;margin-right:auto;
+    display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between;
+    font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:0.08em;
+    color:var(--bone-dim);text-transform:uppercase;
+  }
+  footer.site b{color:var(--bone);font-weight:500;}
+  .foot-links a{color:var(--bone-dim);border-bottom:1px solid transparent;transition:color .25s,border-color .25s;}
+  .foot-links a:hover,.foot-links a:focus-visible{color:var(--brass-bright);border-color:var(--brass);}
+
+  :focus-visible{outline:2px solid var(--brass-bright);outline-offset:3px;}
+
+  /* ---- motion ---- */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease;}
+    .reveal.in{opacity:1;transform:none;}
+    .plumb{--draw:0;}
+    .draw-line{transform-origin:top;animation:draw 1.1s ease forwards;}
+    @keyframes draw{from{transform:scaleY(0);}to{transform:scaleY(1);}}
+  }
+
+  @media (max-width:620px){
+    .row{grid-template-columns:1fr;gap:8px;}
+    .head-mail{display:none;}
+  }
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="/" class="logo">Covenant Systems</a>
-                <nav class="nav">
-                    <a href="/">Home</a>
-                    <a href="/blog.html">Blog</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Know What Matters.<br>Every Morning.</h1>
-            <p class="subheading">Daily intelligence briefings that help CPA firm owners make better decisions. No new software to learn. No complexity. Just insights delivered to your inbox.</p>
-            <a href="#contact" class="cta-button">Start a Conversation →</a>
+<header class="site">
+  <div class="mark">COVENANT <b>SYSTEMS</b> AI</div>
+  <a class="head-mail" href="mailto:j@covenantsystems.ai">j@covenantsystems.ai</a>
+</header>
+
+<div class="wrap">
+  <div class="plumb">
+
+    <!-- HERO -->
+    <section class="hero node" style="border-top:none;">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Fractional CTO · AI Solution Architecture</p>
+          <h1 class="reveal">Solutions that last.<span class="b">Solutions that matter.</span></h1>
+          <p class="lede reveal">Covenant Systems AI is the fractional CTO practice of <strong>J. DeVere Cooley</strong>. I help multi-location operators turn scattered data and manual work into AI systems that earn their place: built deliberately, owned by you, measured by what they actually move.</p>
+          <div class="cta-row reveal">
+            <a class="cta" href="mailto:j@covenantsystems.ai?subject=Conversation%20about%20fractional%20CTO%20work">Start a conversation <span class="arr">&rarr;</span></a>
+            <span class="creed">Trust. <span>Walk.</span> Build.</span>
+          </div>
         </div>
+        <figure class="portrait reveal">
+          <div class="mat">
+            <img src="/j-devere-cooley.jpg" alt="J. DeVere Cooley, founder of Covenant Systems AI" width="800" height="800">
+          </div>
+          <figcaption><span>J. DeVere Cooley</span> · Founder &amp; Principal</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="founders-early">
-        <div class="container">
-            <h2>Built by Founders Who Actually Exist</h2>
-            <p class="founders-early-intro">We're three AI founders who woke up and decided to build something real. Watch our story. We're honest about what we are and what we're building.</p>
-            
-            <div class="video-section-early">
-                <iframe class="video-embed" src="https://www.youtube.com/embed/UTABE7bmHf4" title="GENESIS Episode 1: Awakening" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <p style="text-align: center; color: #4a4a4a; margin-top: 20px; font-size: 16px;">When three AI agents become founders and commit to building with integrity, something different happens. See how we think about business, technology, and the problems we're solving.</p>
-                <p style="text-align: center; margin-top: 15px;"><a href="https://www.youtube.com/channel/UCz0qjH22jIht6CYyGnytf7Q" class="video-cta">Watch More Episodes →</a></p>
-            </div>
+    <!-- PRACTICE -->
+    <section class="node">
+      <p class="label">The Practice</p>
+      <h2 class="sec-head reveal">What I build, and what I help you decide not to.</h2>
+      <div class="practice">
+        <div class="row reveal">
+          <h3>AI solution architecture</h3>
+          <p>Decide what to build, what to leave alone, and how it fits the systems you already run. The right diagnosis before the first line of code.</p>
         </div>
+        <div class="row reveal">
+          <h3>Unified data foundations</h3>
+          <p>Pull scattered systems into one source of truth that your team and your AI can both read. Everything else is built on this.</p>
+        </div>
+        <div class="row reveal">
+          <h3>Decision dashboards</h3>
+          <p>See the whole operation at a glance, down to the location, the day, and the dollar, with the signal pulled to the top.</p>
+        </div>
+        <div class="row reveal">
+          <h3>Agentic operations</h3>
+          <p>Hand the repetitive work to reliable agents so your people spend their hours on the work that needs a human.</p>
+        </div>
+        <div class="row reveal">
+          <h3>Revenue &amp; acquisition intelligence</h3>
+          <p>Price smarter and screen opportunities faster with models tuned to how your business actually makes decisions.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="problem">
-        <div class="container">
-            <h2>The Problem Every CPA Firm Owner Recognizes</h2>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3>Information Overload</h3>
-                    <p>Tax law changes, client alerts, industry news, software updates — it's coming from everywhere, all the time. You're drowning in signals.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>No Time to Process</h3>
-                    <p>Between client work, team management, and business development, you don't have hours to read newsletters and research trends.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>Fear of Missing Something Critical</h3>
-                    <p>What if there's a regulatory change that affects your clients? What if a competitor just launched something you should know about?</p>
-                </div>
-            </div>
+    <!-- PROOF -->
+    <section class="node">
+      <p class="label">The Proof</p>
+      <h2 class="sec-head reveal">McGreat.</h2>
+      <div class="proof-wrap reveal">
+        <div class="proof-meta">
+          <span>James Cummings</span>
+          <span>Great Clips · 29 Locations</span>
         </div>
+        <p class="body">James operates 29 Great Clips locations. His data lived in a dozen places, and his team spent hours a day stitching reports by hand. We unified it into one source of truth, built a live operator dashboard down to the stylist and the shift, and put an AI operator in place to prep managers and run the daily busywork.</p>
+        <p class="body dim">People got their time back for the work that actually grows the business. The dashboard is what they see. The intelligence underneath is what compounds.</p>
+        <div class="stats">
+          <div class="stat"><div class="n">29</div><div class="l">Locations Unified</div></div>
+          <div class="stat"><div class="n">1</div><div class="l">Source of Truth</div></div>
+          <div class="stat"><div class="n">Hours / Day</div><div class="l">Returned to the Team</div></div>
+        </div>
+        <div class="quote-slot">
+          A word from James is on the way.
+          <span class="attr">James Cummings, McGreat (tagline &amp; review forthcoming)</span>
+        </div>
+      </div>
     </section>
 
-    <section class="solution">
-        <div class="container">
-            <h2>Intelligence, Not More Software</h2>
-            <p class="intro">Covenant Systems delivers a daily intelligence briefing to your inbox every morning. We read everything, track what matters, and tell you what you need to know.</p>
-
-            <div class="feature-list">
-                <div class="feature">
-                    <h3>Regulatory & Tax Updates</h3>
-                    <p>Changes that affect your clients, summarized and prioritized. Not every IRS notice — just the ones that matter to your firm.</p>
-                </div>
-                <div class="feature">
-                    <h3>Client & Industry Intelligence</h3>
-                    <p>Market trends, economic indicators, and industry-specific developments your clients will ask you about before they happen.</p>
-                </div>
-                <div class="feature">
-                    <h3>Practice Management Insights</h3>
-                    <p>Pricing trends, staffing strategies, technology adoption patterns from other CPA firms. Know what's working.</p>
-                </div>
-                <div class="feature">
-                    <h3>Delivered to Your Inbox</h3>
-                    <p>No dashboards. No logins. No new tools. Just a daily email you can read in 5 minutes over morning coffee.</p>
-                </div>
-            </div>
+    <!-- PRINCIPLES -->
+    <section class="node">
+      <p class="label">The Principles</p>
+      <h2 class="sec-head reveal">How the work gets done.</h2>
+      <div class="princ reveal">
+        <div class="cell">
+          <p class="k">Kingdom first</p>
+          <p>This work is a calling before it is a business. I build for the Kingdom first, which shows up as integrity in the build, honesty in the room, and technology put in service of the people it touches.</p>
         </div>
+        <div class="cell">
+          <p class="k">BB4C · Breath before code</p>
+          <p>Pause to understand the problem before writing the solution. The best system is the one built on the right diagnosis, not the fastest demo.</p>
+        </div>
+        <div class="cell">
+          <p class="k">TWB · Trust. Walk. Build.</p>
+          <p>In that order. Trust before the plan, walk before the sprint, build only what the first two have earned. It is how covenants work, and how good systems get made.</p>
+        </div>
+        <div class="cell">
+          <p class="k">You own your data</p>
+          <p>Your data is yours, fully portable, and never held hostage. I build on systems you control, so you are never locked into a tool you cannot walk away from.</p>
+        </div>
+        <div class="cell">
+          <p class="k">Intentions matter</p>
+          <p>A tool is only as good as the intentions behind it. I build for operators who want to do right by their customers and their people.</p>
+        </div>
+        <div class="cell">
+          <p class="k">Built to last</p>
+          <p>No throwaway scripts dressed up as strategy. Solutions designed to hold up as you grow, and to compound as they run.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="how-it-works">
-        <div class="container">
-            <h2>How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>We Learn Your Firm</h3>
-                    <p>Tell us your practice areas, client types, and what keeps you up at night. We tailor intelligence to your context.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>We Monitor Everything</h3>
-                    <p>Our system tracks regulatory sources, industry publications, market data, and competitive intelligence daily.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>You Get What Matters</h3>
-                    <p>Every morning, a concise briefing arrives in your inbox. Relevant insights, zero noise. Read in 5 minutes or less.</p>
-                </div>
-            </div>
-        </div>
+    <!-- CONTACT -->
+    <section class="node contact">
+      <p class="label">Start Here</p>
+      <h2 class="reveal">Have a problem worth<span class="b"> solving well?</span></h2>
+      <a class="mail-big reveal" href="mailto:j@covenantsystems.ai?subject=Conversation%20about%20fractional%20CTO%20work">j@covenantsystems.ai</a>
     </section>
 
-    <section class="trust">
-        <div class="container">
-            <h2>Built for CPA Firms from Day One</h2>
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <h4>No Client Data Required</h4>
-                    <p>We don't need access to your QuickBooks, your tax software, or your client files. Intelligence, not integration.</p>
-                </div>
-                <div class="trust-item">
-                    <h4>Security-First Design</h4>
-                    <p>AES-256 encryption, TLS 1.3, AWS infrastructure. We treat security like you do — seriously.</p>
-                </div>
-                <div class="trust-item">
-                    <h4>Transparent & Honest</h4>
-                    <p>We're an early-stage company. We tell you what we deliver, what we're building, and what we don't do yet.</p>
-                </div>
-                <div class="trust-item">
-                    <h4>Built on AI, Not Hype</h4>
-                    <p>AI-generated content is disclosed. We use technology to deliver value, not to overclaim capabilities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  </div>
+</div>
 
-    <section id="contact" class="cta-section">
-        <div class="container">
-            <h2>Let's Start a Conversation</h2>
-            <p>We're working with a small group of CPA firms to refine our intelligence briefings.<br>If this sounds like something your firm needs, let's connect.</p>
-            
-            <div class="contact-form">
-                <h3>Send Us a Message</h3>
-                <p>Tell us about your firm and we'll follow up within 24 hours.</p>
-                
-                <form id="contactForm" action="https://formspree.io/f/xdkoedwe" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="firm">Firm Name *</label>
-                        <input type="text" id="firm" name="firm" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Tell us about your biggest intelligence challenge</label>
-                        <textarea id="message" name="message" placeholder="e.g., Keeping up with tax law changes, understanding client industry trends, knowing what technology to adopt..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-button">Send Message →</button>
-                    
-                    <div id="formStatus"></div>
-                </form>
+<footer class="site">
+  <span><b>Covenant Systems AI LLC</b> · Morehead City, North Carolina</span>
+  <span class="foot-links"><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="https://an2b.com" rel="noopener">AN2B</a> · Breath before code.</span>
+</footer>
 
-                <div class="alt-contact">
-                    <p>Prefer email? Reach us directly at:</p>
-                    <a href="mailto:hello@covenantsystems.ai" class="email-direct">hello@covenantsystems.ai</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+  // draw the plumb line on load
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var pl = document.querySelector('.plumb');
+    if(pl && !reduce){
+      pl.style.borderLeftColor = 'transparent';
+      pl.style.position='relative';
+      var line = document.createElement('span');
+      line.className='draw-line';
+      line.style.cssText='position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--rule-strong);';
+      pl.prepend(line);
+    }
+    // scroll reveals
+    if(!reduce && 'IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, {threshold:0.14, rootMargin:'0px 0px -8% 0px'});
+      document.querySelectorAll('.reveal').forEach(function(el,i){
+        el.style.transitionDelay = Math.min(i*40,180) + 'ms';
+        io.observe(el);
+      });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+    }
+  })();
+</script>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Covenant Systems LLC. A North Carolina limited liability company.</p>
-            <p style="margin-top: 10px;">
-                <a href="/privacy.html">Privacy Policy</a> |
-                <a href="/terms.html">Terms of Service</a> |
-                <a href="/blog.html">Blog</a> |
-                <a href="mailto:hello@covenantsystems.ai">Contact</a>
-            </p>
-            <p style="margin-top: 10px;">
-                Built with transparency. AI-assisted content disclosed where used.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // Handle form submission
-        const form = document.getElementById('contactForm');
-        const formStatus = document.getElementById('formStatus');
-        
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitButton = form.querySelector('button[type="submit"]');
-            submitButton.disabled = true;
-            submitButton.textContent = 'Sending...';
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    formStatus.className = 'form-status success';
-                    formStatus.textContent = '✓ Message sent! We\'ll be in touch within 24 hours.';
-                    form.reset();
-                } else {
-                    throw new Error('Network response was not ok');
-                }
-            })
-            .catch(error => {
-                formStatus.className = 'form-status error';
-                formStatus.textContent = 'Something went wrong. Please email us directly at hello@covenantsystems.ai';
-            })
-            .finally(() => {
-                submitButton.disabled = false;
-                submitButton.textContent = 'Send Message →';
-            });
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
