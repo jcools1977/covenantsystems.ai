@@ -11,7 +11,9 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
-const PORT = process.env.PORT || 8080;
+// Match the port the previous nginx container used (80), so Railway's existing
+// routing reaches us. Railway's PORT variable, if set, still takes precedence.
+const PORT = process.env.PORT || 80;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const CONTACT_TO = process.env.CONTACT_TO || "j@covenantsystems.ai";
 const CONTACT_FROM =
@@ -178,4 +180,9 @@ const server = http.createServer((req, res) => {
   res.end("Method not allowed");
 });
 
-server.listen(PORT, () => console.log(`Covenant Systems site listening on ${PORT}`));
+process.on("uncaughtException", (err) => console.error("uncaughtException", err));
+process.on("unhandledRejection", (err) => console.error("unhandledRejection", err));
+
+server.listen(PORT, "0.0.0.0", () =>
+  console.log(`Covenant Systems site listening on 0.0.0.0:${PORT}`)
+);
