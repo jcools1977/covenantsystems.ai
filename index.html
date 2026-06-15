@@ -279,19 +279,45 @@
     transition:color .25s,letter-spacing .25s;
   }
   .mail-big:hover,.mail-big:focus-visible{color:var(--brass-bright);letter-spacing:0.04em;}
-  .copy-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:20px;}
-  .copy-mail{
-    display:inline-flex;align-items:center;gap:9px;
+  /* ---- contact form ---- */
+  .contact-form{margin-top:34px;max-width:560px;display:grid;gap:20px;}
+  .field{display:grid;gap:8px;}
+  .field label{
     font-family:"IBM Plex Mono",monospace;
-    font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
-    color:var(--bone-dim);background:transparent;
-    border:1px solid var(--rule-strong);
-    padding:10px 16px;cursor:pointer;
-    transition:color .25s,border-color .25s,background .25s;
+    font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--brass);
   }
-  .copy-mail:hover,.copy-mail:focus-visible{color:var(--brass-bright);border-color:var(--brass);background:rgba(188,148,86,0.06);}
-  .copy-mail.copied{color:var(--brass-bright);border-color:var(--brass);}
-  .copy-mail .ico{width:13px;height:13px;flex:none;}
+  .field input,.field textarea{
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:1rem;color:var(--bone);
+    background:var(--ink-raised);
+    border:1px solid var(--rule-strong);
+    padding:13px 15px;width:100%;
+    transition:border-color .25s,background .25s;
+  }
+  .field textarea{resize:vertical;min-height:128px;line-height:1.6;}
+  .field input::placeholder,.field textarea::placeholder{color:var(--bone-dim);opacity:0.6;}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--brass);background:rgba(188,148,86,0.05);}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  .form-send{
+    display:inline-flex;align-items:center;gap:12px;justify-self:start;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:13.5px;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--ink);background:var(--brass);
+    padding:15px 26px;border:1px solid var(--brass);cursor:pointer;
+    transition:background .25s,transform .25s,opacity .25s;
+  }
+  .form-send:hover,.form-send:focus-visible{background:var(--brass-bright);transform:translateY(-2px);}
+  .form-send[disabled]{opacity:0.55;cursor:default;transform:none;}
+  .form-status{
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:0.04em;
+    margin:0;min-height:1.2em;color:var(--bone-dim);
+  }
+  .form-status.ok{color:var(--brass-bright);}
+  .form-status.err{color:#E0A0A0;}
+  .form-alt{font-size:0.92rem;color:var(--bone-dim);margin:0;}
+  .form-alt a{color:var(--brass-bright);border-bottom:1px solid transparent;transition:border-color .2s;}
+  .form-alt a:hover{border-color:var(--brass);}
 
   /* ---- footer ---- */
   footer.site{
@@ -342,7 +368,7 @@
           <h1 class="reveal">Solutions that last.<span class="b">Solutions that matter.</span></h1>
           <p class="lede reveal">Covenant Systems AI is the fractional CTO practice of <strong>J. DeVere Cooley</strong>. I help multi-location operators turn scattered data and manual work into AI systems that earn their place: built deliberately, owned by you, measured by what they actually move.</p>
           <div class="cta-row reveal">
-            <a class="cta" href="mailto:j@covenantsystems.ai?subject=Conversation%20about%20fractional%20CTO%20work">Start a conversation <span class="arr">&rarr;</span></a>
+            <a class="cta" href="#contact">Start a conversation <span class="arr">&rarr;</span></a>
             <span class="creed">Trust. <span>Walk.</span> Build.</span>
           </div>
         </div>
@@ -439,16 +465,33 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="node contact">
+    <section class="node contact" id="contact">
       <p class="label">Start Here</p>
       <h2 class="reveal">Have a problem worth<span class="b"> solving well?</span></h2>
-      <div class="copy-row reveal">
-        <a class="mail-big" href="mailto:j@covenantsystems.ai?subject=Conversation%20about%20fractional%20CTO%20work">j@covenantsystems.ai</a>
-        <button class="copy-mail" type="button" data-mail="j@covenantsystems.ai" aria-label="Copy email address to clipboard">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-          <span class="lbl">Copy address</span>
-        </button>
-      </div>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" maxlength="200" required>
+        </div>
+        <div class="field">
+          <label for="cf-company">Company</label>
+          <input id="cf-company" name="company" type="text" autocomplete="organization" maxlength="160">
+        </div>
+        <div class="field">
+          <label for="cf-message">What are you trying to solve?</label>
+          <textarea id="cf-message" name="message" maxlength="4000" required></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <button class="form-send" type="submit">Send message <span class="arr">&rarr;</span></button>
+        <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+        <p class="form-alt">Prefer to email directly? <a href="mailto:j@covenantsystems.ai">j@covenantsystems.ai</a></p>
+      </form>
     </section>
 
   </div>
@@ -485,33 +528,51 @@
       document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
     }
 
-    // copy-to-clipboard for the email, so visitors without a default mail app still get the address
-    document.querySelectorAll('.copy-mail').forEach(function(btn){
-      var lbl = btn.querySelector('.lbl');
-      var original = lbl ? lbl.textContent : '';
-      var timer;
-      btn.addEventListener('click', function(){
-        var mail = btn.getAttribute('data-mail');
-        var done = function(ok){
-          if(lbl){ lbl.textContent = ok ? 'Copied' : mail; }
-          btn.classList.add('copied');
-          clearTimeout(timer);
-          timer = setTimeout(function(){
-            if(lbl){ lbl.textContent = original; }
-            btn.classList.remove('copied');
-          }, 2200);
+    // contact form: post to the same-origin endpoint, which relays via Resend
+    var form = document.getElementById('contactForm');
+    if(form){
+      var status = document.getElementById('cf-status');
+      var btn = form.querySelector('.form-send');
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        var data = {
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          company: form.company.value.trim(),
+          message: form.message.value.trim(),
+          website: form.website.value
         };
-        if(navigator.clipboard && navigator.clipboard.writeText){
-          navigator.clipboard.writeText(mail).then(function(){ done(true); }, function(){ done(false); });
-        } else {
-          var ta = document.createElement('textarea');
-          ta.value = mail; ta.style.position='fixed'; ta.style.opacity='0';
-          document.body.appendChild(ta); ta.select();
-          try { document.execCommand('copy'); done(true); } catch(e){ done(false); }
-          document.body.removeChild(ta);
+        if(!data.name || !data.email || !data.message){
+          status.className = 'form-status err';
+          status.textContent = 'Please fill in your name, email, and message.';
+          return;
         }
+        btn.disabled = true;
+        status.className = 'form-status';
+        status.textContent = 'Sending...';
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify(data)
+        }).then(function(r){
+          return r.json().then(function(body){ return {ok:r.ok, body:body}; });
+        }).then(function(res){
+          if(res.ok && res.body && res.body.ok){
+            form.reset();
+            status.className = 'form-status ok';
+            status.textContent = 'Thank you. Your message is on its way. I will reply soon.';
+          } else {
+            status.className = 'form-status err';
+            status.textContent = (res.body && res.body.error) || 'Something went wrong. Please email j@covenantsystems.ai directly.';
+          }
+        }).catch(function(){
+          status.className = 'form-status err';
+          status.textContent = 'Something went wrong. Please email j@covenantsystems.ai directly.';
+        }).then(function(){
+          btn.disabled = false;
+        });
       });
-    });
+    }
   })();
 </script>
 

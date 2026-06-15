@@ -1,3 +1,3 @@
-Dockerfile
-.dockerignore
 .git
+.dockerignore
+node_modules

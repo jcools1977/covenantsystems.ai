@@ -1,0 +1,12 @@
+{
+  "name": "covenantsystems-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site and contact endpoint for Covenant Systems AI LLC.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
