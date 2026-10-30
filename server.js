@@ -34,6 +34,7 @@ const PUBLIC = {
   "/covenant-logo.svg": { file: "covenant-logo.svg", type: "image/svg+xml", cache: 86400 },
   "/covenant-mark.svg": { file: "covenant-mark.svg", type: "image/svg+xml", cache: 86400 },
   "/covenant-lockup.svg": { file: "covenant-lockup.svg", type: "image/svg+xml", cache: 86400 },
+  "/an2b-logo.svg": { file: "an2b-logo.svg", type: "image/svg+xml", cache: 86400 },
   "/og-image.png": { file: "og-image.png", type: "image/png", cache: 86400 },
   "/favicon.svg": { file: "favicon.svg", type: "image/svg+xml", cache: 86400 },
   "/favicon.png": { file: "favicon.png", type: "image/png", cache: 86400 },

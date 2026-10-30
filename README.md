@@ -15,6 +15,7 @@ architecture practice of J. DeVere Cooley.
 - covenant-lockup.svg  Emblem and wordmark side by side (nav and footer)
 - favicon.svg / favicon.png / apple-touch-icon.png  Icons from the emblem
 - og-image.png         Social share card
+- an2b-logo.svg        AN2B logo (copied from an2b.com) for the footer links
 - server.js     Zero-dependency Node server: serves the site and the contact endpoint
 - package.json  Start script and Node engine
 - Dockerfile    node:20-alpine container that runs server.js

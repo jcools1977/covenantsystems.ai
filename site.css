@@ -650,6 +650,17 @@ textarea:focus-visible {
 .cs-footer a:hover {
   color: var(--cs-gold-light);
 }
+.cs-footer .cs-an2b-logo {
+  display: block;
+  flex-shrink: 0;
+  height: 15px;
+  width: auto;
+  opacity: 0.92;
+  transition: opacity 0.2s;
+}
+.cs-footer a:hover .cs-an2b-logo {
+  opacity: 1;
+}
 .cs-footer a .cs-arrow {
   width: 13px;
   height: 13px;
