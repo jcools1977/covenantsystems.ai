@@ -3,51 +3,52 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b0b0c" />
+<meta name="color-scheme" content="dark" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<title>Terms of Service: Covenant Systems AI</title>
-<meta name="description" content="Terms of service for the Covenant Systems AI website." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#0F1518;--bone:#E9E3D5;--bone-dim:#A7A89E;--brass:#BC9456;--brass-bright:#D8B477;
-    --rule:rgba(233,227,213,0.13);--maxw:760px;--gut:clamp(20px,5vw,48px);
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--ink);color:var(--bone);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;}
-  a{color:var(--brass-bright);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;}
-  a:hover{border-color:var(--brass);}
-  header,main,footer{max-width:var(--maxw);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut);}
-  header{display:flex;justify-content:space-between;align-items:center;padding-top:26px;padding-bottom:26px;border-bottom:1px solid var(--rule);}
-  .mark{font-family:"IBM Plex Mono",monospace;font-weight:500;letter-spacing:0.18em;font-size:13px;text-transform:uppercase;}
-  .mark b{color:var(--brass);font-weight:500;}
-  .mark a{border:none;color:var(--bone);}
-  main{padding-top:56px;padding-bottom:64px;}
-  h1{font-family:"Marcellus",serif;font-weight:400;font-size:clamp(2rem,5vw,3rem);margin:0 0 8px;}
-  .eff{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:0.08em;color:var(--bone-dim);text-transform:uppercase;margin-bottom:40px;}
-  h2{font-family:"Marcellus",serif;font-weight:400;font-size:1.4rem;color:var(--brass-bright);margin:40px 0 12px;}
-  p{color:var(--bone-dim);margin:0 0 16px;}
-  p strong{color:var(--bone);font-weight:500;}
-  ul{color:var(--bone-dim);margin:0 0 16px;padding-left:22px;}
-  li{margin-bottom:8px;}
-  .note{border-left:2px solid var(--brass);background:rgba(188,148,86,0.06);padding:16px 20px;font-size:0.95rem;margin:28px 0;color:var(--bone-dim);}
-  footer{border-top:1px solid var(--rule);padding-top:26px;padding-bottom:40px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--bone-dim);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;}
-  footer b{color:var(--bone);font-weight:500;}
-  ::selection{background:var(--brass);color:var(--ink);}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<title>Terms of Service: Covenant Systems AI</title>
+<meta name="description" content="Terms of service for the Covenant Systems AI website." />
+<link rel="canonical" href="https://covenantsystems.ai/terms.html" />
 </head>
 <body>
-<header>
-  <div class="mark"><a href="/">COVENANT <b>SYSTEMS</b> AI</a></div>
-  <a href="mailto:j@covenantsystems.ai" style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--bone-dim);">j@covenantsystems.ai</a>
+
+<a class="cs-skip-link" href="#main-content">Skip to content</a>
+<header class="cs-nav" id="siteNav">
+  <div class="cs-container cs-nav-inner">
+    <a class="cs-nav-logo" href="/" aria-label="Covenant Systems AI home">
+      <img src="/covenant-lockup.svg" alt="Covenant Systems AI" width="245" height="35">
+    </a>
+    <nav class="cs-desktop-nav" aria-label="Main navigation">
+      <a href="/#practice">The practice</a>
+      <a href="/#principles">Principles</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <a class="cs-nav-cta" href="/#contact">
+      Start a conversation
+      <svg class="cs-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <button class="cs-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav">
+      <svg class="cs-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="cs-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <nav class="cs-mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+    <a href="/#practice">The practice</a>
+    <a href="/#principles">Principles</a>
+    <a href="/#contact">Start a conversation</a>
+  </nav>
 </header>
 
-<main>
+<main id="main-content" class="cs-legal">
+  <div class="cs-legal-inner">
   <h1>Terms of Service</h1>
-  <p class="eff">Effective June 12, 2026</p>
+  <p class="cs-effective">Effective June 12, 2026</p>
 
   <p>These terms govern your use of the Covenant Systems AI website. Covenant Systems AI LLC ("Covenant Systems," "we," "us," or "our") is a North Carolina limited liability company operating the fractional CTO and AI solution architecture practice of J. DeVere Cooley. By using this site, you agree to these terms.</p>
 
@@ -75,11 +76,75 @@
   <h2>Contact</h2>
   <p><strong>Covenant Systems AI LLC</strong><br>Morehead City, North Carolina<br><a href="mailto:j@covenantsystems.ai">j@covenantsystems.ai</a></p>
 
+</div>
 </main>
 
-<footer>
-  <span><b>Covenant Systems AI LLC</b> · Morehead City, NC</span>
-  <span><a href="/" style="color:var(--bone-dim);">Home</a> · <a href="/privacy.html" style="color:var(--bone-dim);">Privacy</a> · <a href="https://an2b.com" rel="noopener" style="color:var(--bone-dim);">AN2B</a> · <a href="https://hirenorman.com" rel="noopener" style="color:var(--bone-dim);">HireNorman</a></span>
+<footer class="cs-footer">
+  <div class="cs-container">
+    <div class="cs-footer-grid">
+      <div>
+        <a class="cs-footer-logo" href="/" aria-label="Covenant Systems AI home">
+          <img src="/covenant-lockup.svg" alt="Covenant Systems AI" width="224" height="32">
+        </a>
+        <p>Fractional CTO and AI solution architecture.<br>Trust. Walk. Build.</p>
+        <a href="mailto:j@covenantsystems.ai">j@covenantsystems.ai</a>
+      </div>
+      <div>
+        <h2>Practice</h2>
+        <ul>
+          <li><a href="/#practice">The practice</a></li>
+          <li><a href="/#principles">Principles</a></li>
+          <li><a href="/#contact">Start a conversation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Related</h2>
+        <ul>
+          <li><a href="https://an2b.com" rel="noopener"><img class="cs-an2b-logo" src="/an2b-logo.svg" alt="AN2B" width="77" height="16"> <svg class="cs-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="https://an2b.com/labs" rel="noopener"><img class="cs-an2b-logo" src="/an2b-logo.svg" alt="AN2B" width="77" height="16"> <span>Labs</span> <svg class="cs-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="https://hirenorman.com" rel="noopener"><img class="cs-an2b-logo cs-norman-logo" src="/norman-logo.svg" alt="HireNorman" width="66" height="15"> <svg class="cs-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="/privacy.html">Privacy policy</a></li>
+          <li><a href="/terms.html">Terms of service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="cs-footer-bottom">
+      <p>© <span data-year>2026</span> Covenant Systems AI LLC · Morehead City, North Carolina</p>
+      <span>Breath before code.</span>
+    </div>
+  </div>
 </footer>
+
+<script>
+  (function(){
+    // nav: go solid on scroll; mobile menu toggle
+    var nav = document.getElementById('siteNav');
+    var toggle = nav && nav.querySelector('.cs-menu-toggle');
+    var menu = document.getElementById('mobileNav');
+    function onScroll(){ nav.classList.toggle('cs-nav-solid', window.scrollY > 20 || !menu.hidden); }
+    function setMenu(open){
+      menu.hidden = !open;
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      onScroll();
+    }
+    if(nav && toggle && menu){
+      onScroll();
+      window.addEventListener('scroll', onScroll, {passive:true});
+      toggle.addEventListener('click', function(){ setMenu(menu.hidden); });
+      menu.addEventListener('click', function(e){ if(e.target.closest('a')) setMenu(false); });
+      document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && !menu.hidden){ setMenu(false); toggle.focus(); } });
+      window.matchMedia('(min-width: 1000px)').addEventListener('change', function(m){ if(m.matches) setMenu(false); });
+    }
+    var y = document.querySelector('[data-year]');
+    if(y) y.textContent = new Date().getFullYear();
+  })();
+</script>
+
 </body>
 </html>

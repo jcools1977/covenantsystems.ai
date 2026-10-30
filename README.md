@@ -8,7 +8,15 @@ architecture practice of J. DeVere Cooley.
 - privacy.html  Privacy policy
 - terms.html    Terms of service
 - robots.txt    Crawler rules
+- site.css      Shared styles (same layout system as an2b.com, gold palette)
 - j-devere-cooley.jpg  Founder portrait
+- covenant-logo.svg    Full stacked logo (mark, wordmark, Trust. Walk. Build.)
+- covenant-mark.svg    Emblem only (hero)
+- covenant-lockup.svg  Emblem and wordmark side by side (nav and footer)
+- favicon.svg / favicon.png / apple-touch-icon.png  Icons from the emblem
+- og-image.png         Social share card
+- an2b-logo.svg        AN2B logo (copied from an2b.com) for the footer links
+- norman-logo.svg      Norman. wordmark (from the hirenorman brand kit) for the footer HireNorman link
 - server.js     Zero-dependency Node server: serves the site and the contact endpoint
 - package.json  Start script and Node engine
 - Dockerfile    node:20-alpine container that runs server.js
@@ -35,6 +43,11 @@ redeploys. No build step.
 `npm start` (or `node server.js`), then open http://localhost:8080.
 Without RESEND_API_KEY set, the form returns a "not configured" message;
 everything else works.
+
+## Brand
+The logo files are cleaned exports of the Covenant Systems AI vector logo
+(Illustrator metadata removed, gold gradients kept). New public files must be
+added to the PUBLIC allowlist in server.js or they return 404.
 
 ## Notes
 - The contact form is the primary path; a direct mailto link to

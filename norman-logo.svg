@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1059 240" fill="none" role="img" aria-label="Norman.">
+  <!-- Norman. wordmark from the hirenorman brand kit (static/brand/norman-lockup.svg),
+       baked with Norman's dark-theme ink (#E7E3DA) and brand blue (#6FA8D0)
+       because an <img> cannot inherit currentColor or read the stylesheet. -->
+  <g stroke="#E7E3DA" stroke-width="28" stroke-linecap="butt" stroke-linejoin="miter">
+    <path d="M14 220V20L146 220V20"/>
+    <circle cx="258" cy="148" r="58"/>
+    <path d="M370 220V90A51 51 0 0 1 421 141"/>
+    <path d="M471 220V141A51 51 0 0 1 573 141A51 51 0 0 1 675 141V220"/>
+    <path d="M573 141V220"/>
+    <circle cx="787" cy="148" r="58"/>
+    <path d="M845 90V220"/>
+    <path d="M895 220V141A51 51 0 0 1 997 141V220"/>
+  </g>
+  <rect x="1031" y="192" width="28" height="28" fill="#6FA8D0"/>
+</svg>
