@@ -84,7 +84,7 @@
       <h1 id="home-heading">Solutions that last.<br> <span>Solutions that matter.</span></h1>
       <p class="cs-hero-description">Covenant Systems AI is the fractional CTO practice of <strong>J. DeVere Cooley</strong>. I help multi-location operators turn scattered data and manual work into AI systems that earn their place: built deliberately, owned by you, measured by what they actually move.</p>
       <div class="cs-actions">
-        <a class="cs-button cs-button-primary" href="#contact">Start a conversation <svg class="cs-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="cs-button cs-button-primary" href="https://hirenorman.com/interview?source=covenant&amp;campaign=business-waitlist-2026">Start with Norman <svg class="cs-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="cs-button cs-button-secondary" href="#practice">See the practice <svg class="cs-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <p class="cs-hero-signature">Trust.<span aria-hidden="true">/</span>Walk.<span aria-hidden="true">/</span>Build.</p>
@@ -177,35 +177,22 @@
   </section>
 
   <!-- CONTACT -->
+  <section class="cs-section" id="blueprint" aria-labelledby="blueprint-heading"><div class="cs-container">
+    <p class="cs-eyebrow">A paid discovery engagement</p><h2 id="blueprint-heading">Your 45-day business<br>transformation blueprint.</h2>
+    <p class="cs-hero-description">Turn a broad ambition into a practical plan. Together we map how work happens today, identify the constraints, and prioritize what to improve.</p>
+    <div class="cs-principles-grid"><article><h3>Understand the operation</h3><p>Map workflows, handoffs, tools, and the people responsible. Record what is supported by evidence and what still needs checking.</p></article><article><h3>Choose the first opportunities</h3><p>Evaluate candidate workflows, data readiness, permissions, and human review. Agree how a useful result would be measured.</p></article><article><h3>Prepare the blueprint</h3><p>A prioritized roadmap, proposed implementation scope, responsibilities, and decisions for your team. Implementation is scoped separately.</p></article></div>
+    <p class="cs-hero-description">The 45-day engagement begins at an agreed kickoff. Deliverables, participation, fees, and timing are confirmed in writing before paid work starts. The initial Norman interview is a separate discovery step.</p>
+    <a class="cs-button cs-button-primary" href="https://hirenorman.com/interview?source=covenant&amp;campaign=business-waitlist-2026">Explore fit with Norman ↗</a>
+    <p class="cs-form-alt">AN2B is the foundry. AN2X is its shared technology platform. Covenant Systems AI provides the transformation engagement.</p>
+  </div></section>
   <section class="cs-section cs-contact" id="contact" aria-labelledby="contact-heading">
     <div class="cs-container cs-contact-grid">
       <div>
         <p class="cs-eyebrow">Start Here</p>
         <h2 id="contact-heading">Have a problem worth<br><span>solving well?</span></h2>
-        <form class="cs-form" id="contactForm" novalidate>
-          <div class="cs-field">
-            <label for="cf-name">Name</label>
-            <input id="cf-name" name="name" type="text" autocomplete="name" maxlength="120" required>
-          </div>
-          <div class="cs-field">
-            <label for="cf-email">Email</label>
-            <input id="cf-email" name="email" type="email" autocomplete="email" maxlength="200" required>
-          </div>
-          <div class="cs-field">
-            <label for="cf-company">Company</label>
-            <input id="cf-company" name="company" type="text" autocomplete="organization" maxlength="160">
-          </div>
-          <div class="cs-field">
-            <label for="cf-message">What are you trying to solve?</label>
-            <textarea id="cf-message" name="message" maxlength="4000" required></textarea>
-          </div>
-          <div class="cs-hp" aria-hidden="true">
-            <label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label>
-          </div>
-          <button class="cs-button cs-button-primary" type="submit">Send message <svg class="cs-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <p class="cs-form-status" id="cf-status" role="status" aria-live="polite"></p>
-          <p class="cs-form-alt">Prefer to email directly? <a href="mailto:j@covenantsystems.ai">j@covenantsystems.ai</a></p>
-        </form>
+        <p class="cs-hero-description">Start with Norman, AN2B’s voice or text interview. We’ll use what you choose to share to understand your business and identify questions for a human review.</p>
+        <a class="cs-button cs-button-primary" href="https://hirenorman.com/interview?source=covenant&amp;campaign=business-waitlist-2026">Start your business interview ↗</a>
+        <p class="cs-form-alt">You can separately consent to share your brief with Covenant. No purchase commitment. Prefer to email directly? <a href="mailto:j@covenantsystems.ai">j@covenantsystems.ai</a></p>
       </div>
       <figure class="cs-founder reveal">
         <img src="/j-devere-cooley.jpg" alt="J. DeVere Cooley, founder of Covenant Systems AI" width="800" height="800" loading="lazy">
@@ -306,51 +293,6 @@
       document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
     }
 
-    // contact form: post to the same-origin endpoint, which relays via Resend
-    var form = document.getElementById('contactForm');
-    if(form){
-      var status = document.getElementById('cf-status');
-      var btn = form.querySelector('button[type="submit"]');
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        var data = {
-          name: form.name.value.trim(),
-          email: form.email.value.trim(),
-          company: form.company.value.trim(),
-          message: form.message.value.trim(),
-          website: form.website.value
-        };
-        if(!data.name || !data.email || !data.message){
-          status.className = 'cs-form-status err';
-          status.textContent = 'Please fill in your name, email, and message.';
-          return;
-        }
-        btn.disabled = true;
-        status.className = 'cs-form-status';
-        status.textContent = 'Sending...';
-        fetch('/api/contact', {
-          method: 'POST',
-          headers: {'Content-Type':'application/json'},
-          body: JSON.stringify(data)
-        }).then(function(r){
-          return r.json().then(function(body){ return {ok:r.ok, body:body}; });
-        }).then(function(res){
-          if(res.ok && res.body && res.body.ok){
-            form.reset();
-            status.className = 'cs-form-status ok';
-            status.textContent = 'Thank you. Your message is on its way. I will reply soon.';
-          } else {
-            status.className = 'cs-form-status err';
-            status.textContent = (res.body && res.body.error) || 'Something went wrong. Please email j@covenantsystems.ai directly.';
-          }
-        }).catch(function(){
-          status.className = 'cs-form-status err';
-          status.textContent = 'Something went wrong. Please email j@covenantsystems.ai directly.';
-        }).then(function(){
-          btn.disabled = false;
-        });
-      });
-    }
   })();
 </script>
 

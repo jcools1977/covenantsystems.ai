@@ -53,3 +53,6 @@ added to the PUBLIC allowlist in server.js or they return 404.
 - The contact form is the primary path; a direct mailto link to
   j@covenantsystems.ai remains as a fallback.
 - Legal pages are plain-language starting points. Have counsel review.
+
+## Acquisition funnel (2026-11-06)
+All new website acquisition enters the existing HireNorman consent flow with source=covenant. The old contact form and Resend relay are retired; /api/contact returns 410 with the interview URL. Direct email remains a human-handled alternative, outside the automatic queue. No credentials, customer data, payment, or autonomous outreach are added.
