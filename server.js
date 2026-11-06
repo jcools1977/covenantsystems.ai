@@ -18,6 +18,8 @@ const PORTS = Array.from(new Set([80, Number(process.env.PORT)].filter(Boolean))
 // Allowlist of public files. Anything not listed returns 404, which also
 // keeps server.js, package.json, and the Dockerfile from ever being served.
 const PUBLIC = {
+  "/neural-background.css": { file: "neural-background.css", type: "text/css; charset=utf-8", cache: 300 },
+  "/neural-network.svg": { file: "neural-network.svg", type: "image/svg+xml", cache: 300 },
   "/sitemap.xml": { file: "sitemap.xml", type: "application/xml; charset=utf-8", cache: 300 },
   "/llms.txt": { file: "llms.txt", type: "text/plain; charset=utf-8", cache: 300 },
   "/site.json": { file: "site.json", type: "application/json; charset=utf-8", cache: 300 },
