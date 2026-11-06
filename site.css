@@ -901,3 +901,9 @@ textarea:focus-visible {
     height: 22px;
   }
 }
+/* The blueprint extends Covenant's existing identity. */
+#blueprint { scroll-margin-top:100px; }
+.cs-principles-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin:40px 0; }
+.cs-principles-grid h3 { font-size:23px;line-height:1.3;margin-bottom:16px; }
+.cs-principles-grid p { color:var(--cs-muted,#b6b8c2);line-height:1.8; }
+@media(max-width:800px){.cs-principles-grid{grid-template-columns:1fr;}}
