@@ -1,3 +1,5 @@
-# Covenant Systems AI
 User-agent: *
 Allow: /
+Disallow: /api/
+
+Sitemap: https://covenantsystems.ai/sitemap.xml

@@ -46,3 +46,6 @@ added to the PUBLIC allowlist in server.js or they return 404.
 
 ## Acquisition funnel (2026-11-06)
 All new website acquisition enters the existing HireNorman consent flow with source=covenant. The old contact form and Resend relay are retired; /api/contact returns 410 with the interview URL. Direct email remains a human-handled alternative, outside the automatic queue. No credentials, customer data, payment, or autonomous outreach are added.
+
+## Search, AI discovery and referrals
+`robots.txt`, `sitemap.xml`, `llms.txt`, `site.json`, and `index.md` describe public content only. After editing visible copy or public facts, run `python3 scripts/generate_discovery.py` to refresh the checked-in structured data and Markdown. No search visibility or recommendation is guaranteed. `referral.js` forwards a bounded opaque `ref` code across the three public sites without storage; Norman captures it for human review, never automatic commission or payment.

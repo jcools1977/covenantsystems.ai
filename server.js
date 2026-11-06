@@ -18,6 +18,12 @@ const PORTS = Array.from(new Set([80, Number(process.env.PORT)].filter(Boolean))
 // Allowlist of public files. Anything not listed returns 404, which also
 // keeps server.js, package.json, and the Dockerfile from ever being served.
 const PUBLIC = {
+  "/sitemap.xml": { file: "sitemap.xml", type: "application/xml; charset=utf-8", cache: 300 },
+  "/llms.txt": { file: "llms.txt", type: "text/plain; charset=utf-8", cache: 300 },
+  "/site.json": { file: "site.json", type: "application/json; charset=utf-8", cache: 300 },
+  "/index.md": { file: "index.md", type: "text/markdown; charset=utf-8", cache: 300 },
+
+  "/referral.js": { file: "referral.js", type: "text/javascript; charset=utf-8", cache: 300 },
   "/": { file: "index.html", type: "text/html; charset=utf-8", cache: 300 },
   "/index.html": { file: "index.html", type: "text/html; charset=utf-8", cache: 300 },
   "/privacy.html": { file: "privacy.html", type: "text/html; charset=utf-8", cache: 300 },

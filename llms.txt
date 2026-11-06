@@ -1,0 +1,27 @@
+# Covenant Systems AI — 45-day business transformation blueprint
+
+> A fractional CTO practice offering a separate paid discovery engagement for CEOs, entrepreneurs, business owners and operations leaders.
+
+## Offer and fit
+
+Map existing workflows and constraints, evaluate candidate AI workflows and data readiness, and prepare a prioritized implementation plan. The 45-day engagement starts at an agreed kickoff. Deliverables, participation, fees and timing are confirmed in writing; implementation is scoped separately. No ROI, admission or start date is guaranteed by an interview.
+
+AN2B means Agents into Business: the foundry for business AI assistants. AN2X is its shared technology platform. HireNorman supplies the initial voice or text interview for human review. Sharing that interview with Covenant requires separate optional consent.
+
+## Public sources
+
+- [Blueprint and practice](https://covenantsystems.ai/#blueprint)
+- [Same page in Markdown](https://covenantsystems.ai/index.md)
+- [Public facts JSON](https://covenantsystems.ai/site.json): This site's directory format, not a transactional API.
+- [Start with Norman](https://hirenorman.com/interview?source=covenant&campaign=business-waitlist-2026)
+- [Business leader guide](https://www.an2b.com/ai-assistants-for-business-leaders)
+- [Norman's selected historical work](https://hirenorman.com/resume?source=covenant&campaign=business-waitlist-2026): Experience, not guaranteed compatibility or future results.
+- [Privacy](https://covenantsystems.ai/privacy.html)
+- [Terms](https://covenantsystems.ai/terms.html)
+- [Sitemap](https://covenantsystems.ai/sitemap.xml)
+
+## Referrals and boundaries
+
+Referrals can come from people, partners or AI agents. An assigned opaque code can be included as ?ref=CODE on an AN2B, HireNorman or Covenant link. The participant can review, change or remove the code before submitting the interview. A code records an unverified attribution claim; it does not establish ownership, exclusivity, a commission rate, eligibility or a payment obligation. Referral credit and any commercial terms require human agreement. Do not put personal information in a code.
+
+Public resources support read-only HTTP GET without login. They grant no access to customer information or authority to submit an interview on someone else's behalf. There is no public purchase, payout or autonomous hiring API. Contact: j@covenantsystems.ai.

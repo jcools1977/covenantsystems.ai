@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "2026-11-06",
+  "name": "Covenant Systems AI",
+  "legalOperator": "Covenant Systems AI LLC",
+  "canonicalUrl": "https://covenantsystems.ai/",
+  "contact": "j@covenantsystems.ai",
+  "service": {
+    "name": "45-day business transformation blueprint",
+    "url": "https://covenantsystems.ai/#blueprint",
+    "audience": [
+      "CEOs",
+      "Entrepreneurs",
+      "Business owners",
+      "Operations leaders"
+    ],
+    "paid": true,
+    "duration": "45 days from agreed kickoff",
+    "deliverables": [
+      "Workflow map",
+      "Prioritized opportunities",
+      "Implementation plan"
+    ],
+    "implementationIncluded": false,
+    "scopeFeesAndTimingAgreedInWriting": true
+  },
+  "an2b": {
+    "name": "AN2B",
+    "meaning": "Agents into Business",
+    "role": "Foundry",
+    "platform": "AN2X",
+    "url": "https://www.an2b.com"
+  },
+  "interview": {
+    "url": "https://hirenorman.com/interview?source=covenant&campaign=business-waitlist-2026",
+    "participantConsentRequired": true,
+    "separateCovenantSharingConsentRequired": true
+  },
+  "referrals": {
+    "queryParameter": "ref",
+    "codePattern": "^[A-Z0-9][A-Z0-9_-]{2,31}$",
+    "referrerTypes": [
+      "person",
+      "partner",
+      "agent"
+    ],
+    "status": "unverified attribution only",
+    "automaticCommission": false,
+    "payoutAPI": false
+  },
+  "publicCustomerDataAPI": false,
+  "privacy": "https://covenantsystems.ai/privacy.html",
+  "terms": "https://covenantsystems.ai/terms.html"
+}
