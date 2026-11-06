@@ -1,10 +1,9 @@
 "use strict";
 
 /**
- * Covenant Systems AI: static site + contact endpoint.
- * Zero dependencies. Serves the site and accepts POST /api/contact,
- * which relays the message to Resend. The API key lives only in the
- * RESEND_API_KEY environment variable, never in the repo.
+ * Covenant Systems AI: static site with a shared HireNorman acquisition path.
+ * Zero dependencies. The retired contact endpoint returns 410 without
+ * collecting information or sending email.
  */
 
 const http = require("http");

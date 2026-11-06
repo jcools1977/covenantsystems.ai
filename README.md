@@ -4,7 +4,7 @@ Site for Covenant Systems AI LLC, the fractional CTO and AI solution
 architecture practice of J. DeVere Cooley.
 
 ## Structure
-- index.html    Landing page (with the contact form)
+- index.html    Landing page with the paid 45-day blueprint and Norman interview links
 - privacy.html  Privacy policy
 - terms.html    Terms of service
 - robots.txt    Crawler rules
@@ -17,32 +17,22 @@ architecture practice of J. DeVere Cooley.
 - og-image.png         Social share card
 - an2b-logo.svg        AN2B logo (copied from an2b.com) for the footer links
 - norman-logo.svg      Norman. wordmark (from the hirenorman brand kit) for the footer HireNorman link
-- server.js     Zero-dependency Node server: serves the site and the contact endpoint
+- server.js     Zero-dependency Node server: serves the site and retires the old contact endpoint
 - package.json  Start script and Node engine
 - Dockerfile    node:20-alpine container that runs server.js
 
 ## How it runs
-A small Node server (server.js) serves the static pages and exposes
-`POST /api/contact`. The endpoint validates the submission and relays it
-to your inbox through Resend. There are no third-party browser scripts and
-no analytics: the only network call leaves the server, not the visitor.
+The small Node server serves static pages. Acquisition links enter HireNorman's existing consent flow; Covenant does not collect a parallel contact record. The retired `POST /api/contact` endpoint returns 410 with the interview URL, without storing or sending the request. No third-party browser scripts or analytics are added.
 
-## Environment variables (set in Railway, never in the repo)
-- `RESEND_API_KEY`  Required. Your Resend API key.
-- `CONTACT_TO`      Optional. Recipient. Defaults to j@covenantsystems.ai.
-- `CONTACT_FROM`    Optional. Sender. Defaults to
-                    "Covenant Systems AI <noreply@covenantsystems.ai>".
-                    Must be an address on a domain verified in Resend.
-- `PORT`            Provided automatically by Railway.
+## Environment
+`PORT` is supplied by Railway. The server also retains port 80 for the existing proxy mapping. Legacy Resend/contact variables are no longer read; no credential changes are part of this release.
 
 ## Deploy
 Push to the connected branch. Railway rebuilds the Dockerfile and
 redeploys. No build step.
 
 ## Local preview
-`npm start` (or `node server.js`), then open http://localhost:8080.
-Without RESEND_API_KEY set, the form returns a "not configured" message;
-everything else works.
+`PORT=8080 npm start` (or `PORT=8080 node server.js`), then open http://localhost:8080.
 
 ## Brand
 The logo files are cleaned exports of the Covenant Systems AI vector logo
@@ -50,8 +40,8 @@ The logo files are cleaned exports of the Covenant Systems AI vector logo
 added to the PUBLIC allowlist in server.js or they return 404.
 
 ## Notes
-- The contact form is the primary path; a direct mailto link to
-  j@covenantsystems.ai remains as a fallback.
+- The Norman interview is the primary path; a direct mailto link to
+  j@covenantsystems.ai remains as a human-handled alternative.
 - Legal pages are plain-language starting points. Have counsel review.
 
 ## Acquisition funnel (2026-11-06)
