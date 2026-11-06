@@ -1,0 +1,13 @@
+/* Shared, still neural texture: no animation, event listeners or content overlays. */
+body, .cs-intro-strip, .cs-principles, .cs-contact, .cs-footer {
+  background-image: url("/neural-network.svg");
+  background-size: 1440px 900px;
+  background-position: center top;
+  background-repeat: repeat;
+}
+@media (max-width: 640px) {
+  body, .cs-intro-strip, .cs-principles, .cs-contact, .cs-footer { background-size: 1000px 625px; }
+}
+@media print, (forced-colors: active) {
+  body, .cs-intro-strip, .cs-principles, .cs-contact, .cs-footer { background-image: none; }
+}
